@@ -17,6 +17,10 @@ def game_varsetup():
   print("You have chosen to buy", amnt_food,"Pounds of food")
   dollars = dollars-amnt_food*10
   print("You have,",dollars,"dollars remaining")
+  amnt_water = int(input("Please enter the amount of water you wish to carry(Water 1 Dollar per gallon):"))
+  dollars = dollars-amnt_water*2
+  print("You have,",dollars,"dollars remaining")
+  amnt_horses 
 
 
 
