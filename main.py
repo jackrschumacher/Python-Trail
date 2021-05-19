@@ -7,7 +7,9 @@ def intro():
   print("Your age is:",age)
   location_start = str(input("Where would you like to start your adventure from?"))
   print("You have chosen to start in:",location_start)
-
+  location_end = str(input("Where would you like your adventure to end?"))
+  print("You have chosen to end at:",location_end)
+  
 print("Welcome to Python Trail")
 intro()
 
