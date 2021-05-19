@@ -13,13 +13,16 @@ def intro():
 def game_varsetup():
   dollars = 400
   print("You have $400 dollars to spend")
-  amnt_food = str(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
-  print("You have chose ")
+  amnt_food = int(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
+  print("You have chosen to buy", amnt_food,"Pounds of food")
+  dollars = dollars-amnt_food*10
+  print("You have,",dollars,"dollars remaining")
 
 
 
 print("Welcome to Python Trail")
 intro()
+game_varsetup()
 
 
 
