@@ -15,6 +15,8 @@ def intro():          #Setup Intro Function, sets up original info: name,etc.
 
 def game_varsetup():     #Buy Supplies
   dollars = 400
+
+
   print("You have $400 dollars to spend")
   amnt_food = int(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
   print("You have chosen to buy", amnt_food,"Pounds of food")
@@ -26,13 +28,13 @@ def game_varsetup():     #Buy Supplies
   print("You have,",dollars,"dollars remaining")
   animal = ("Please enter the animal you would like to pull your wagon:")
   print("You Have Chosen:",animal,"To pull your wagon")
-  animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)")  
+  animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)"))  
   print("You purchased,",animal_amnt,"Animals")
   dollars = dollars-animal_amnt
   print("You have,",dollars,"Dollars Remaining")
   spareprts_amnt = int(input("Please enter the number of spare parts you wish to have(10)"))
-  print("You have,",spareparts_amnt,"Spare Parts")
-  dollars = dollars - spareparts_amnt * 10
+  print("You have,",spareprts_amnt,"Spare Parts")
+  dollars = dollars - spareprts_amnt * 10
   print("You purchased:",dollars,"Spare Parts")
   medicine_amnt = int(input("Please enter the amount of medicine you wish to buy ($10)"))
   print("You have purchased,",medicine_amnt,"Medicine")
@@ -40,10 +42,22 @@ def game_varsetup():     #Buy Supplies
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
 
+
 #END
 
-def start_game():   #start of Game
-  print("Welcome to Python Trail")
+
+
+
+def start_game():
+  print("LOADING...")
+  print("===============")
+  print("You begin in ",location_start)
+
+
+
+
+  
+  
 
 #END
 print("Welcome to Python Trail")         #Running different functions, Main body
