@@ -7,15 +7,6 @@ def name():
 def age():
   age = str(input("Please enter your age:"))
   print("Your age is:",age)
-
-def location_end():
-  location_start = str(input("Where would you like to start your adventure from?"))
-  print("You have chosen to start in:",location_start)
-
-def location_end():
-  location_end = str(input("Where would you like your adventure to end?"))
-  print("You have chosen to end at:",location_end)
-  print("\n\n\n")
   
 
 #END
@@ -56,11 +47,18 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game(location_start):
+  
   print("LOADING...")
   print("===============")
-  print("You begin in ",location_start)
-  distance_traveled = randrange(1,20,0.75)
-  print("You traveled",distance_traveled)
+  print("You begin in Wisconsin and Travel to Flordia)
+  total_distance = 0
+  total_distance = randrange(500,20001,1)
+  distance_traveled = 0
+
+  if total_distance <= distance_traveled:
+    distance_traveled = randrange(1,20,1)
+    print("You traveled",distance_traveled,"Miles")
+  
 
 
   
@@ -69,11 +67,15 @@ def main():
   #END
   
   print("Welcome to Python Trail")         #Running different functions, Main body
+  name()
+  age()
   location_start()
   location_end()
-  age()
   game_varsetup()
   start_game(location_start)
+
+
+main()
 
 
 
