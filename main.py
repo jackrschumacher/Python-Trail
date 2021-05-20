@@ -46,17 +46,20 @@ def game_varsetup():     #Buy Supplies
 
 
 
-def start_game(location_start):
+def start_game():
   
   print("LOADING...")
   print("===============")
-  print("You begin in Wisconsin and Travel to Flordia)
+  print("You begin in Wisconsin and Travel to Flordia")
   total_distance = 0
   total_distance = randrange(500,20001,1)
   distance_traveled = 0
+  dist_needed = randrange(500,2000,20)
 
-  if total_distance <= distance_traveled:
+  for x in range(dist_needed):
     distance_traveled = randrange(1,20,1)
+    total_distance = total_distance + distance_traveled
+
     print("You traveled",distance_traveled,"Miles")
   
 
@@ -69,10 +72,9 @@ def main():
   print("Welcome to Python Trail")         #Running different functions, Main body
   name()
   age()
-  location_start()
-  location_end()
+ 
   game_varsetup()
-  start_game(location_start)
+  start_game()
 
 
 main()
