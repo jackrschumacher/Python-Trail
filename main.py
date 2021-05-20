@@ -1,6 +1,6 @@
-from random import randrange
+from random import randrange    #Import random
 
-def intro():
+def intro():          #Setup Intro Function, sets up original info: name,etc.
   name = str(input("What is your name?"))
   print("Your name is,",name)
   age = str(input("Please enter your age:"))
@@ -13,7 +13,7 @@ def intro():
 
 #END
 
-def game_varsetup():
+def game_varsetup():     #Buy Supplies
   dollars = 400
   print("You have $400 dollars to spend")
   amnt_food = int(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
@@ -42,7 +42,7 @@ def game_varsetup():
 
 #END
 
-def start_game():
+def start_game():   #start of Game
   print("Welcome to Python Trail")
 
 #END
