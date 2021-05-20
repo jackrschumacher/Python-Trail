@@ -9,6 +9,9 @@ def intro():
   print("You have chosen to start in:",location_start)
   location_end = str(input("Where would you like your adventure to end?"))
   print("You have chosen to end at:",location_end)
+  print("\n\n\n")
+  print("GAME RULES")
+  print("----------------------")
 
 def game_varsetup():
   dollars = 400
@@ -36,12 +39,14 @@ def game_varsetup():
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
 
-
+def start_game():
+  print("Welcome to Python Trail")
 
 
 print("Welcome to Python Trail")
 intro()
 game_varsetup()
+start_game()
 
 
 
