@@ -1,7 +1,4 @@
 from random import randrange
-from turtle import *
-pen = pen()
-screen = screen()
 
 def intro():
   name = str(input("What is your name?"))
@@ -28,22 +25,21 @@ def game_varsetup():
   animal = ("Please enter the animal you would like to pull your wagon:")
   print("You Have Chosen:",animal,"To pull your wagon")
   animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)")  
-  print("You purchased:",animal_amnt,"Animals")
+  print("You purchased,",animal_amnt,"Animals")
   dollars = dollars-animal_amnt
-  print("You have:",dollars,"Dollars Remaining")
+  print("You have,",dollars,"Dollars Remaining")
   spareprts_amnt = int(input("Please enter the number of spare parts you wish to have(10)"))
-  print("You have:",spareparts_amnt,"Spare Parts")
+  print("You have,",spareparts_amnt,"Spare Parts")
   dollars = dollars - spareparts_amnt * 10
   print("You purchased:",dollars,"Spare Parts")
   medicine_amnt = int(input("Please enter the amount of medicine you wish to buy ($10)"))
-  print("You have purchased:,",medicine_amnt,"Medicine")
+  print("You have purchased,",medicine_amnt,"Medicine")
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
-
+  
 def start_game():
   print("Welcome to Python Trail")
-  print("Loading...")
 
 
 print("Welcome to Python Trail")
