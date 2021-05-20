@@ -23,11 +23,15 @@ def game_varsetup():
   print("You have,",dollars,"dollars remaining")
   animal = ("Please enter the animal you would like to pull your wagon:")
   print("You Have Chosen:",animal,"To pull your wagon")
-  animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon (animals are 15 per animal): "))  
+  animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)")  
   print("You purchased:",animal_amnt,"Animals")
   dollars = dollars-animal_amnt
   print("You have:",dollars,"Dollars Remaining")
-
+  spareprts_amnt = int(input("Please enter the number of spare parts you wish to have(10)"))
+  print("You have:",spareparts_amnt,"Spare Parts")
+  dollars = dollars - spareparts_amnt * 10
+  print("You purchased:",dollars,"Spare Parts")
+  
 
 
 print("Welcome to Python Trail")
