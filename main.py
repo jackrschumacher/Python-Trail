@@ -31,7 +31,12 @@ def game_varsetup():
   print("You have:",spareparts_amnt,"Spare Parts")
   dollars = dollars - spareparts_amnt * 10
   print("You purchased:",dollars,"Spare Parts")
-  
+  medicine_amnt = int(input("Please enter the amount of medicine you wish to buy ($10)"))
+  print("You have purchased:,",medicine_amnt,"Medicine")
+  dollars = dollars - medicine_amnt * 10
+  print("You have:",dollars,"Dollars Remaining")
+
+
 
 
 print("Welcome to Python Trail")
