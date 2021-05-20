@@ -11,6 +11,8 @@ def intro():
   print("You have chosen to end at:",location_end)
   print("\n\n\n")
 
+#END
+
 def game_varsetup():
   dollars = 400
   print("You have $400 dollars to spend")
@@ -37,11 +39,13 @@ def game_varsetup():
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
-  
+
+#END
+
 def start_game():
   print("Welcome to Python Trail")
 
-
+#END
 print("Welcome to Python Trail")
 intro()
 game_varsetup()
