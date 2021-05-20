@@ -51,17 +51,31 @@ def start_game():
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
-  total_distance = 0
-  total_distance = randrange(500,20001,1)
-  distance_traveled = 0
-  distance_traveled = randrange(1,21,1)
-  carriage_dist_left = 0
-  user_choose = 0
+  total_distance = 0        #Distance in total, this willbe length of journey
+  total_distance = randrange(500,2001,1)       #500-2000 miles, intervals of 1
+  print("You have",total_distance,"Miles to Travel")
+  distance_traveled = 0                   #How far you went
+  distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
+  wagon_dist_traveled = 0                 #Distance traveled by wagon
+ 
 
+  
   print("You traveled",distance_traveled," Miles On the first day")
-  carriage_dist_left = total_distance - distance_traveled
+  wagon_dist_traveled = total_distance - distance_traveled
 
-  if distance_traveled
+  if wagon_dist_traveled <= total_distance:
+    random_action = 0
+    random_action = randrange(1,21,1)
+    distance_traveled = 0                   #How far you went
+    distance_traveled = randrange(1,21,1)
+    wagon_dist_traveled = wagon_dist_traveled + distance_traveled
+    print("You traveled,", distance_traveled,"Miles Today")
+
+  else: 
+    print("You have finished your Journey!")
+
+
+
   
 
 
