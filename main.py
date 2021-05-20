@@ -1,15 +1,22 @@
 from random import randrange    #Import random
 
-def intro():          #Setup Intro Function, sets up original info: name,etc.
+def name():        
   name = str(input("What is your name?"))
   print("Your name is,",name)
+
+def age():
   age = str(input("Please enter your age:"))
   print("Your age is:",age)
+
+def location_end():
   location_start = str(input("Where would you like to start your adventure from?"))
   print("You have chosen to start in:",location_start)
+
+def location_end():
   location_end = str(input("Where would you like your adventure to end?"))
   print("You have chosen to end at:",location_end)
   print("\n\n\n")
+  
 
 #END
 
@@ -48,22 +55,25 @@ def game_varsetup():     #Buy Supplies
 
 
 
-def start_game():
+def start_game(location_start):
   print("LOADING...")
   print("===============")
   print("You begin in ",location_start)
-
-
+  distance_traveled = randrange(1,20,0.75)
+  print("You traveled",distance_traveled)
 
 
   
   
-
-#END
-print("Welcome to Python Trail")         #Running different functions, Main body
-intro()
-game_varsetup()
-start_game()
+def main():
+  #END
+  
+  print("Welcome to Python Trail")         #Running different functions, Main body
+  location_start()
+  location_end()
+  age()
+  game_varsetup()
+  start_game(location_start)
 
 
 
