@@ -46,7 +46,7 @@ def start_game():   #start of Game
   print("Welcome to Python Trail")
 
 #END
-print("Welcome to Python Trail")
+print("Welcome to Python Trail")         #Running different functions, Main body
 intro()
 game_varsetup()
 start_game()
