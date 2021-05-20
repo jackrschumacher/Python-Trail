@@ -54,13 +54,14 @@ def start_game():
   total_distance = 0
   total_distance = randrange(500,20001,1)
   distance_traveled = 0
-  dist_needed = randrange(500,2000,20)
+  distance_traveled = randrange(1,21,1)
+  carriage_dist_left = 0
+  user_choose = 0
 
-  for x in range(dist_needed):
-    distance_traveled = randrange(1,20,1)
-    total_distance = total_distance + distance_traveled
+  print("You traveled",distance_traveled," Miles On the first day")
+  carriage_dist_left = total_distance - distance_traveled
 
-    print("You traveled",distance_traveled,"Miles")
+  if distance_traveled
   
 
 
