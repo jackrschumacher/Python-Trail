@@ -1,4 +1,7 @@
 from random import randrange
+from turtle import *
+pen = pen()
+screen = screen()
 
 def intro():
   name = str(input("What is your name?"))
@@ -37,9 +40,10 @@ def game_varsetup():
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
-  
+
 def start_game():
   print("Welcome to Python Trail")
+  print("Loading...")
 
 
 print("Welcome to Python Trail")
