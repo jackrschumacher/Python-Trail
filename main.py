@@ -141,34 +141,14 @@ def start_game():
           print("===============")
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
-        animal = animal-1
+        animal_amnt = animal_amnt-1
         print("You have:",animal_amnt,"left")
         print("===============")
     
     if random_action ==5:
       print("===============")
       town_encountered = True
-      print("You have encountered a town!")
-      user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
-      if (user_choice == "Stop" or user_choice =="stop" or user_choice =="stp"):
-        print("You have chosen to stop at the town")
-        print("You can choose to buy additonal medicine, Animals, Water or Food")
-        animals_add = int(input("Please enter how many animals you wish to buy:"))
-        animal_amnt = animal_amnt+animals_add
-        print("You have", animal_amnt,"Animals")
-        add_med = int(input("How much medicine would you like to buy?:"))
-        mediciine_amnt = medicine_amnt+add_med
-        print("You have",mediciine_amnt,"Medicine")
-        add_water = int(input("How much water would you like to buy?:"))
-        amnt_water = amnt_water+add_water
-        print("You have:",amnt_water,"Water")
-        add_food = int(input("Please enter how much food you wish to buy?:"))
-        amnt_food = amnt_food + add_food
-        print("You have",amnt_food,"Food")
-        print("===============")
-      else:
-        print("You continue on")
-        print("===============")
+      
 
     if random_action ==7:
       print("===============")
