@@ -1,12 +1,14 @@
 from random import randrange    #Import random
 
-def name():        
+def get_name():        
   name = str(input("What is your name?"))
   print("Your name is,",name)
+  return name
 
-def age():
+def get_age():
   age = str(input("Please enter your age:"))
   print("Your age is:",age)
+  return age
   
 
 #END
@@ -46,7 +48,7 @@ def game_varsetup():     #Buy Supplies
 
 
 
-def start_game():
+def start_game(name):
   
   print("LOADING...")
   print("===============")
@@ -57,38 +59,46 @@ def start_game():
   distance_traveled = 0                   #How far you went
   distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
   wagon_dist_traveled = 0                 #Distance traveled by wagon
-  alive = 1
+  alive = True
 
   
   print("You traveled",distance_traveled," Miles On the first day")
   wagon_dist_traveled =  wagon_dist_traveled + distance_traveled
 
-  while wagon_dist_traveled <= total_distance and alive ==1 :
+  while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
     random_action = randrange(1,21,1)
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
+    print("You have Traveled",wagon_dist_traveled)
     print("You traveled,", distance_traveled,"Miles Today")
+    
+    if random_action ==1:
+      cholera = "true"
+      print( name,"has contracted Cholera")
+      user_choice = ""
+      user_choice = str(input("Would you like to use medicine or continue(Type medicine or Continue)"))
+      if user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine":
+        print("You are Cured!")
+      else:
+        print( name,"has died!")
+        print("Game Over!")
+        print("===============")
+        alive = False
 
   
 
 
-
-  
-
-
-  
   
 def main():
   #END
   
   print("Welcome to Python Trail")         #Running different functions, Main body
-  name()
-  age()
- 
+  name = get_name()
+  get_age()
   game_varsetup()
-  start_game()
+  start_game(name)
 
 
 main()
