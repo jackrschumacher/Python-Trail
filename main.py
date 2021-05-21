@@ -78,19 +78,31 @@ def start_game():
     print("You traveled,", distance_traveled,"Miles Today")
     
     if random_action ==1:
-      cholera = "true"
+      cholera = True
       print( name,"has contracted Cholera")
       user_choice = ""
       user_choice = str(input("Would you like to use medicine or continue(Type medicine or Continue)"))
       if (user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine") :
         print("You are Cured!")
+        cholera = False
       else:
         print( name,"has died!")
         print("Game Over!")
         print("===============")
         alive = False
-    print("===============")    
-    print("You have completed your journey!")
+    if random_action == 2:
+      wagon_broken = True
+      print("Your Wagon has broken down")
+      user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
+      if (user_choice == "Spare"):
+        print("X")
+
+
+  print("===============")    
+  print("You have completed your journey!")
+
+      
+    
 
   
 
