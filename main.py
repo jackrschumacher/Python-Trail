@@ -57,13 +57,13 @@ def start_game():
   distance_traveled = 0                   #How far you went
   distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
   wagon_dist_traveled = 0                 #Distance traveled by wagon
- 
+  alive = 1
 
   
   print("You traveled",distance_traveled," Miles On the first day")
-  wagon_dist_traveled = total_distance - distance_traveled
+  wagon_dist_traveled =  wagon_dist_traveled + distance_traveled
 
-  if wagon_dist_traveled <= total_distance:
+  while wagon_dist_traveled <= total_distance and alive ==1 :
     random_action = 0
     random_action = randrange(1,21,1)
     distance_traveled = 0                   #How far you went
@@ -71,8 +71,7 @@ def start_game():
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
     print("You traveled,", distance_traveled,"Miles Today")
 
-  else: 
-    print("You have finished your Journey!")
+  
 
 
 
