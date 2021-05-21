@@ -150,19 +150,24 @@ def start_game():
       town_encountered = True
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
-      if (user_choice == "Stop" or user_choice =="stop" or user_choice =="stp"):
+      while (user_choice == "Stop" or user_choice =="stop" or user_choice =="stp") and dollars > 0:
+        print("You have",dollars,"Reamaining")
         print("You have chosen to stop at the town")
         print("You can choose to buy additonal medicine, Animals, Water or Food")
         animals_add = int(input("Please enter how many animals you wish to buy:"))
+        dollars = dollars - animals_add*15
         animal_amnt = animal_amnt+animals_add
         print("You have", animal_amnt,"Animals")
         add_med = int(input("How much medicine would you like to buy?:"))
+        dollars = dollars - add_med * 10
         mediciine_amnt = medicine_amnt+add_med
         print("You have",mediciine_amnt,"Medicine")
         add_water = int(input("How much water would you like to buy?:"))
+        dollars = dollars - add_water * 1
         amnt_water = amnt_water+add_water
         print("You have:",amnt_water,"Water")
         add_food = int(input("Please enter how much food you wish to buy?:"))
+        dollars = dollars - add_food * 10
         amnt_food = amnt_food + add_food
         print("You have",amnt_food,"Food")
         print("===============")
