@@ -30,7 +30,7 @@ def game_varsetup():     #Buy Supplies
   print("You purchased:",amnt_water,"Water")
   dollars = dollars-amnt_water * 2
   print("You have,",dollars,"dollars remaining")
-  animal = str(input("Please enter the animal you would like to pull your wagon:"))
+  animal = str(input("Please enter the animal you would like to pull your wagon-singular:"))
   animal =animal+"s"
   print("You Have Chosen:",animal,"To pull your wagon")
   animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)"))  
@@ -59,7 +59,7 @@ def start_game():
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
   total_distance = 0        #Distance in total, this willbe length of journey
-  total_distance = randrange(500,5000,1)       #500-5000 miles, intervals of 1
+  total_distance = randrange(500,2001,1)       #500-2000 miles, intervals of 1
   print("You have",total_distance,"Miles to Travel")
   distance_traveled = 0                   #How far you went
   distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
@@ -77,8 +77,8 @@ def start_game():
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
     print("*****TRAVELING*****")
-    time.sleep(2)
-    print("You have Traveled:",wagon_dist_traveled,"In Total")
+    time.sleep(1.25)
+    print("You have Traveled:",wagon_dist_traveled,"Miles In Total")
     print("You traveled,", distance_traveled,"Miles Today")
     miles_left = total_distance - wagon_dist_traveled
     print("You have",miles_left,"Miles left to travel")
@@ -221,8 +221,8 @@ def start_game():
 
 
 
-  print("===============")    
-  print("You have completed your journey!")
+print("===============")    
+print("You have completed your journey!")
 
       
   
