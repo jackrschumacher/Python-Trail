@@ -16,7 +16,7 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
   dollars = 400
 
 
@@ -53,7 +53,7 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
@@ -103,11 +103,18 @@ def start_game():
         wagon_broken = False
         print("Your Wagon is Repaired")
         print("===============")
-      else: 
+      elif amnt_food ==0:
+        print(name,"Starved")
+        print( name,"has died!")
+        print("Game Over!")
+        print("===============")
+        alive = False
+      elif amnt_food > 0: 
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
         print("===============")
+    
         
     if random_action == 4:
       python_encountered = True
@@ -121,9 +128,10 @@ def start_game():
           print("You do not capture the python")
           print("===============")
         elif hunt_random ==1:
-          print("You capture the python")
+          print("You capture the python and eat it")
           print("===============")
-        elif hunt_random ==2:
+          amnt_food = amnt_food
+        elif hunt_random + 2:
           print("You capture the python, but it escapes")
           print("===============")
       else:
@@ -137,14 +145,14 @@ def start_game():
       town_encountered = True
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
-      if (user_choice == "Stop" or user_choice =="Stop" or user_choice =="stp"):
+      if (user_choice == "Stop" or user_choice =="stop" or user_choice =="stp"):
         print("You have chosen to stop at the town")
         print("You can choose to buy additonal medicine, Animals, Water or Food")
         animals_add = int(input("Please enter how many animals you wish to buy:"))
         animal_amnt = animal_amnt+animals_add
         print("You have", animal_amnt,"Animals")
         add_med = int(input("How much medicine would you like to buy?:"))
-        mediciine_amnt = mediciine_amnt+add_med
+        mediciine_amnt = medicine_amnt+add_med
         print("You have",mediciine_amnt,"Medicine")
         add_water = int(input("How much water would you like to buy?:"))
         amnt_water = amnt_water+add_water
