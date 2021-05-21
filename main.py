@@ -77,6 +77,8 @@ def start_game():
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
     print("You have Traveled:",wagon_dist_traveled,"In Total")
     print("You traveled,", distance_traveled,"Miles Today")
+    miles_left = total_distance - wagon_dist_traveled
+    print("You have",miles_left,"Miles left to travel")
     
     if random_action ==1:
       cholera = True
@@ -168,11 +170,43 @@ def start_game():
       if random_action == 7:
         print("You have encountered a river")
         river_encountered = True
-        user_choice = str(input("Would you like to cross or ford the river, or wait(cross,ford,wait)"))
+        user_choice = str(input("Would you like to swim or ford the river, or wait(cross,swim,wait)"))
 
         if (user_choice == "ford" or user_choice =="Ford" or user_choice =="frd"):
-          print("You ford the river")
-        elif 
+          frd_random = randrange(0,6,1)
+          if frd_random ==0:
+            print("You cross the river and lose no supplies")
+          elif frd_random ==1:
+            print("You ford the river but lose 1 Water")
+            water_amnt = water_amnt-1
+            print("You have",water_amnt,"Left")
+          elif frd_random ==2:
+            print("You ford the river")
+          elif frd_random ==3:
+            print("You ford the river but lose 1 spare parts")
+            spareprts_amnt = spareprts_amnt - 1
+            print("You have",spareprts_amnt,"Spare Parts")
+          elif frd_random ==4:
+            print("You ford the river")
+          else:
+            print("You ford the river, but lose 2 animals")
+            animal_amnt = animal_amnt - 2
+            print("You have",animal_amnt,"left")
+        elif (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
+          swm_random = randrange(0,2,1)
+          
+          if swm_random == 0:
+            print("You cross the river")
+          else:
+            print(name,"Drowned")
+            print( name,"has died!")
+            print("Game Over!")
+            print("===============")
+
+
+
+
+         
 
 
 
