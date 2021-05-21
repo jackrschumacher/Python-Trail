@@ -58,7 +58,7 @@ def start_game():
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
   total_distance = 0        #Distance in total, this willbe length of journey
-  total_distance = randrange(500,2001,1)       #500-2000 miles, intervals of 1
+  total_distance = randrange(500,5000,1)       #500-5000 miles, intervals of 1
   print("You have",total_distance,"Miles to Travel")
   distance_traveled = 0                   #How far you went
   distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
@@ -130,8 +130,8 @@ def start_game():
         elif hunt_random ==1:
           print("You capture the python and eat it")
           print("===============")
-          amnt_food = amnt_food
-        elif hunt_random + 2:
+          amnt_food = amnt_food+2
+        elif hunt_random == 2:
           print("You capture the python, but it escapes")
           print("===============")
       else:
@@ -165,6 +165,17 @@ def start_game():
         print("You continue on")
         print("===============")
 
+      if random_action == 7:
+        print("You have encountered a river")
+        river_encountered = True
+        user_choice = str(input("Would you like to cross or ford the river, or wait(cross,ford,wait)"))
+
+        if (user_choice == "ford" or user_choice =="Ford" or user_choice =="frd"):
+          print("You ford the river")
+        elif 
+
+
+
 
 
       
@@ -175,11 +186,7 @@ def start_game():
   print("You have completed your journey!")
 
       
-    
-
   
-
-
   
 def main():
   #END
