@@ -101,6 +101,11 @@ def start_game():
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
+    if random_action == 4:
+      python_encountered = True
+      print("You have encountered a python")
+      
+
 
 
   print("===============")    
