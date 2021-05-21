@@ -29,7 +29,8 @@ def game_varsetup():     #Buy Supplies
   print("You purchased:",amnt_water,"Water")
   dollars = dollars-amnt_water * 2
   print("You have,",dollars,"dollars remaining")
-  animal = ("Please enter the animal you would like to pull your wagon:")
+  animal = str(input("Please enter the animal you would like to pull your wagon:"))
+  animal =animal+"s"
   print("You Have Chosen:",animal,"To pull your wagon")
   animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)"))  
   print("You purchased,",animal_amnt,"Animals")
@@ -104,6 +105,21 @@ def start_game():
     if random_action == 4:
       python_encountered = True
       print("You have encountered a python")
+      user_choice = str(input("Would you like to continue or try to hunt the python(hunt or continue)"))
+      hunt_random = randrange(0,3,1)
+      if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
+        print("You attempt to hunt the python")
+        if hunt_random == 0:
+          print("You do not capture the python")
+        elif hunt_random ==1:
+          print("You capture the python")
+        elif hunt_random ==2:
+          print("You capture the python, but it escapes")
+      else:
+        print("The python comes back when you are sleeping and Kills one of your",animal)
+        animal = animal-1
+        print("You have:",animal_amnt,"left")
+
       
 
 
