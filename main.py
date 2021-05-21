@@ -1,19 +1,22 @@
 from random import randrange    #Import random
 
-def get_name():        
+def get_name():  
+  global name      
   name = str(input("What is your name?"))
   print("Your name is,",name)
-  return name
+  
 
 def get_age():
+  global age
   age = str(input("Please enter your age:"))
   print("Your age is:",age)
-  return age
+  
   
 
 #END
 
 def game_varsetup():     #Buy Supplies
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
   dollars = 400
 
 
@@ -48,8 +51,8 @@ def game_varsetup():     #Buy Supplies
 
 
 
-def start_game(name):
-  
+def start_game():
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
@@ -79,13 +82,15 @@ def start_game(name):
       print( name,"has contracted Cholera")
       user_choice = ""
       user_choice = str(input("Would you like to use medicine or continue(Type medicine or Continue)"))
-      if user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine":
+      if (user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine") :
         print("You are Cured!")
       else:
         print( name,"has died!")
         print("Game Over!")
         print("===============")
         alive = False
+    print("===============")    
+    print("You have completed your journey!")
 
   
 
@@ -95,12 +100,12 @@ def main():
   #END
   
   print("Welcome to Python Trail")         #Running different functions, Main body
-  name = get_name()
+  get_name()
   get_age()
   game_varsetup()
-  start_game(name)
+  start_game()
 
-
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
 main()
 
 
