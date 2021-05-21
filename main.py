@@ -20,7 +20,7 @@ def game_varsetup():     #Buy Supplies
   dollars = 400
 
 
-  print("You have $400 dollars to spend")
+  print("You have",dollars, "dollars to spend")
   amnt_food = int(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
   print("You have chosen to buy", amnt_food,"Pounds of food")
   dollars = dollars-amnt_food * 10
@@ -75,35 +75,43 @@ def start_game():
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
-    print("You have Traveled",wagon_dist_traveled)
+    print("You have Traveled:",wagon_dist_traveled,"In Total")
     print("You traveled,", distance_traveled,"Miles Today")
     
     if random_action ==1:
       cholera = True
+      print("===============")
       print( name,"has contracted Cholera")
       user_choice = ""
       user_choice = str(input("Would you like to use medicine or continue(Type medicine or Continue)"))
       if (user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine") :
         print("You are Cured!")
         cholera = False
+        print("===============")
       else:
         print( name,"has died!")
         print("Game Over!")
         print("===============")
         alive = False
+
     if random_action == 2:
       wagon_broken = True
+      print("===============")
       print("Your Wagon has broken down")
       user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
       if (user_choice == "Spare" or user_choice == "spare" or user_choice == "spr"):
         wagon_broken = False
         print("Your Wagon is Repaired")
+        print("===============")
       else: 
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
+        print("===============")
+        
     if random_action == 4:
       python_encountered = True
+      print("===============")
       print("You have encountered a python")
       user_choice = str(input("Would you like to continue or try to hunt the python(hunt or continue)"))
       hunt_random = randrange(0,3,1)
@@ -111,14 +119,45 @@ def start_game():
         print("You attempt to hunt the python")
         if hunt_random == 0:
           print("You do not capture the python")
+          print("===============")
         elif hunt_random ==1:
           print("You capture the python")
+          print("===============")
         elif hunt_random ==2:
           print("You capture the python, but it escapes")
+          print("===============")
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal = animal-1
         print("You have:",animal_amnt,"left")
+        print("===============")
+    
+    if random_action ==5:
+      print("===============")
+      town_encountered = True
+      print("You have encountered a town!")
+      user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
+      if (user_choice == "Stop" or user_choice =="Stop" or user_choice =="stp"):
+        print("You have chosen to stop at the town")
+        print("You can choose to buy additonal medicine, Animals, Water or Food")
+        animals_add = int(input("Please enter how many animals you wish to buy:"))
+        animal_amnt = animal_amnt+animals_add
+        print("You have", animal_amnt,"Animals")
+        add_med = int(input("How much medicine would you like to buy?:"))
+        mediciine_amnt = mediciine_amnt+add_med
+        print("You have",mediciine_amnt,"Medicine")
+        add_water = int(input("How much water would you like to buy?:"))
+        amnt_water = amnt_water+add_water
+        print("You have:",amnt_water,"Water")
+        add_food = int(input("Please enter how much food you wish to buy?:"))
+        amnt_food = amnt_food + add_food
+        print("You have",amnt_food,"Food")
+        print("===============")
+      else:
+        print("You continue on")
+        print("===============")
+
+
 
       
 
