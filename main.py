@@ -196,7 +196,7 @@ def start_game():
           print("You ford the river, but lose 2 animals")
           animal_amnt = animal_amnt - 2
           print("You have",animal_amnt,"left")
-      if (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
+      elif (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
         swm_random = randrange(0,2,1)
           
         if swm_random == 0:
@@ -207,6 +207,14 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
+      elif (user_choice == "wait" or user_choice =="Wait" or user_choice == "wt"):
+        print("*****WAITING*****")
+        time.sleep(5)
+        animal_amnt = animal_amnt - 2
+
+        print("While you waited, 2 animals died")
+        print("You have",animal_amnt,animal,"Left")
+
 
 
 
@@ -214,6 +222,9 @@ def start_game():
          
 
 
+def end_game():
+  print("===============")    
+  print("You have completed your journey!")
 
 
 
@@ -221,8 +232,7 @@ def start_game():
 
 
 
-print("===============")    
-print("You have completed your journey!")
+
 
       
   
@@ -235,6 +245,7 @@ def main():
   get_age()
   game_varsetup()
   start_game()
+  end_game()
 
 global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
 main()
