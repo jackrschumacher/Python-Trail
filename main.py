@@ -220,6 +220,8 @@ def start_game():
         print("While you waited, 2 animals died")
         print("You have",animal_amnt,animal,"Left")
 
+        
+
 
 
 
