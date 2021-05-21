@@ -94,8 +94,13 @@ def start_game():
       wagon_broken = True
       print("Your Wagon has broken down")
       user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
-      if (user_choice == "Spare"):
-        print("X")
+      if (user_choice == "Spare" or user_choice == "spare" or user_choice == "spr"):
+        wagon_broken = False
+        print("Your Wagon is Repaired")
+      else: 
+        amnt_food = amnt_food - 2
+        print("You lose 2 food from wild animals")
+        print("You have:",amnt_food,"food left")
 
 
   print("===============")    
