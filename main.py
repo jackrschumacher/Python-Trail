@@ -1,4 +1,5 @@
 from random import randrange    #Import random
+import time
 
 def get_name():  
   global name      
@@ -75,6 +76,8 @@ def start_game():
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
+    print("*****TRAVELING*****")
+    time.sleep(2)
     print("You have Traveled:",wagon_dist_traveled,"In Total")
     print("You traveled,", distance_traveled,"Miles Today")
     miles_left = total_distance - wagon_dist_traveled
