@@ -17,7 +17,7 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   dollars = 400
 
 
@@ -54,7 +54,7 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
@@ -225,37 +225,34 @@ def start_game():
 
 
 
-
-
          
 
 
+
+
+
+      
+
+
+
+
+
 def end_game():
-  print("===============")    
-  print("You have completed your journey!")
-
-
-
-      
-
-
-
-
-
-      
-  
+  print("You have completed your journey")
   
 def main():
   #END
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   
   print("Welcome to Python Trail")         #Running different functions, Main body
   get_name()
   get_age()
   game_varsetup()
   start_game()
-  end_game()
+  if alive == True:
+    end_game()
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
 main()
 
 
