@@ -155,10 +155,16 @@ def start_game():
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
         if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine") and dollars >15:
           print("You have chosen to buy medicine")
-          print("You have:",dollars,"Left")
+          print("You have:",dollars,"Dollars Left")
           medicine_add = int(input("How much Medicine do you wish to buy?"))
           medicine_amnt = medicine_amnt + medicine_add
-        elif
+          dollars = dollars - medicine_add * 10
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+        elif (what_buy == "Food" or what_buy == "fd" or what_buy == "food") and dollars > 15:
+          print("You Have Chosen to buy food")
+          
 
 
 
