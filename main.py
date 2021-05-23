@@ -164,7 +164,17 @@ def start_game():
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Food" or what_buy == "fd" or what_buy == "food") and dollars > 15:
           print("You Have Chosen to buy food")
+          print("You have:",dollars,"Dollars Left")
+          food_add = str(input("How much food do you wish to buy?"))
+          food_amnt = food_amnt - food_add
+          dollars = dollars - food_add * 10
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+        elif 
           
+          
+
 
 
 
