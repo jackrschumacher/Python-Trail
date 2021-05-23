@@ -157,6 +157,8 @@ def start_game():
           print("You have chosen to buy medicine")
           print("You have:",dollars,"Dollars Left")
           medicine_add = int(input("How much Medicine do you wish to buy?"))
+          if medicine_add == "Quit" or medicine_add == "Qut" or medicine_add == "quit":
+            print("You have chosen to Quit")
           medicine_amnt = medicine_amnt + medicine_add
           dollars = dollars - medicine_add * 10
           print("You have:",dollars, "Remaining")
@@ -166,6 +168,8 @@ def start_game():
           print("You Have Chosen to buy food")
           print("You have:",dollars,"Dollars Left")
           food_add = str(input("How much food do you wish to buy?"))
+          if food_add == "Quit" or food_add == "Qut" or food_add == "quit":
+            print("You have chosen to Quit")
           amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
           print("You have:",dollars, "Remaining")
@@ -175,7 +179,9 @@ def start_game():
           print("You have chosen to buy water")
           print("You have:",dollars,"Dollars Left") 
           water_add = int(input("How much water do you want to buy?:"))
-          water_add = water_amnt + water_add
+          if water_add == "Quit" or water_add == "Qut" or water_add == "quit":
+            print("You have chosen to Quit")
+          water_amnt = water_amnt + water_add
           dollars = dollars - water_add * 1
           print("You have:",dollars, "Remaining")
           if dollars <=0:
@@ -184,6 +190,8 @@ def start_game():
           print("You have chosen to buy Animals")
           print("You have:",dollars,"Dollars Left") 
           animal_add = int(input("How many animals do you want to buy?:"))
+          if animal_add == "Quit" or animal_add == "Qut" or animal_add == "quit":
+            print("You have chosen to Quit")
           dollars = dollars - animal_add * 15
           print("You have:",dollars, "Remaining")
           if dollars <=0:
