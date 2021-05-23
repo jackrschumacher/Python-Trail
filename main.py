@@ -1,5 +1,5 @@
 from random import randrange    #Import random
-import time
+import time     
 
 def get_name():  
   global name      
@@ -145,7 +145,7 @@ def start_game():
         print("You have:",animal_amnt,"left")
         print("===============")
     
-    if random_action ==5 and end_visit = False:
+    if random_action ==5:
       print("===============")
       town_encountered = True
       end_visit = False
@@ -191,15 +191,6 @@ def start_game():
 
           
         
-          
-
-
-          
-          
-
-
-
-
 
     if random_action ==7:
       print("===============")
@@ -251,15 +242,6 @@ def start_game():
 
 
          
-
-
-
-
-
-      
-
-
-
 
 
 def end_game():
