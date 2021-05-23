@@ -72,7 +72,7 @@ def start_game():
 
   while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
-    random_action = randrange(1,21,1)
+    random_action = randrange(1,31,1)
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
@@ -148,33 +148,13 @@ def start_game():
     if random_action ==5:
       print("===============")
       town_encountered = True
+      end_visit = False
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
       if user_choice == "stop" or user_choice == "Stop" or user_choice =="stp":
-        while dollars > 15:
-          print("You have",dollars,"Reamaining")
-          print("You have chosen to stop at the town")
-          print("You can choose to buy additonal medicine, Animals, Water or Food")
-          animals_add = int(input("Please enter how many animals you wish to buy:"))
-          dollars = dollars - animals_add*15
-          animal_amnt = animal_amnt+animals_add
-          print("You have", animal_amnt,"Animals")
-          add_med = int(input("How much medicine would you like to buy?:"))
-          dollars = dollars - add_med * 10
-          medicine_amnt = medicine_amnt+add_med
-          print("You have",medicine_amnt,"Medicine")
-          add_water = int(input("How much water would you like to buy?:"))
-          dollars = dollars - add_water * 1
-          amnt_water = amnt_water+add_water
-          print("You have:",amnt_water,"Water")
-          add_food = int(input("Please enter how much food you wish to buy?:"))
-          dollars = dollars - add_food * 10
-          amnt_food = amnt_food + add_food
-          print("You have",amnt_food,"Food")
-          print("===============")
-        if dollars < 15:
-          print("You do not have engough money so you continue on")
-          print("===============")
+        what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
+          if what_buy ==
+
 
     if random_action ==7:
       print("===============")
@@ -242,7 +222,7 @@ def end_game():
   
 def main():
   #END
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   
   print("Welcome to Python Trail")         #Running different functions, Main body
   get_name()
@@ -252,7 +232,7 @@ def main():
   if alive == True:
     end_game()
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, mediciine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
 main()
 
 
