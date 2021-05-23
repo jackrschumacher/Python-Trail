@@ -1,5 +1,5 @@
 from random import randrange    #Import random
-import time
+import time     
 
 def get_name():  
   global name      
@@ -145,7 +145,7 @@ def start_game():
         print("You have:",animal_amnt,"left")
         print("===============")
     
-    if random_action ==5 and end_visit = False:
+    if random_action ==5:
       print("===============")
       town_encountered = True
       end_visit = False
@@ -153,7 +153,7 @@ def start_game():
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
       if user_choice == "stop" or user_choice == "Stop" or user_choice =="stp":
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
-        if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine") and dollars > 15:
+        if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine" or what_buy == "med") and dollars > 15:
           print("You have chosen to buy medicine")
           print("You have:",dollars,"Dollars Left")
           medicine_add = int(input("How much Medicine do you wish to buy?"))
@@ -166,7 +166,7 @@ def start_game():
           print("You Have Chosen to buy food")
           print("You have:",dollars,"Dollars Left")
           food_add = str(input("How much food do you wish to buy?"))
-          food_amnt = food_amnt - food_add
+          amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
           print("You have:",dollars, "Remaining")
           if dollars <=0:
@@ -191,15 +191,6 @@ def start_game():
 
           
         
-          
-
-
-          
-          
-
-
-
-
 
     if random_action ==7:
       print("===============")
@@ -251,15 +242,6 @@ def start_game():
 
 
          
-
-
-
-
-
-      
-
-
-
 
 
 def end_game():
