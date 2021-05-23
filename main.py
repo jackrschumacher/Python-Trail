@@ -245,6 +245,21 @@ def start_game():
         print("While you waited, 2 animals died")
         print("You have",animal_amnt,animal,"Left")
 
+    if random_action == 9:
+      print("You encounter Bandits on your journey")
+      bandit_random = randrange(1,5,1)
+      type_of_item = randrange(1,5,1)
+      if type_of_item == 1:
+        food_stolen = bandit_random
+        amnt_food = amnt_food - food_stolen
+        print("The bandits steal", food_stolen,"Food")
+        print("You have:",amnt_food,"Food Left")
+      elif type_of_item == 2:
+        water_stolen = bandit_random
+        amnt_water = amnt_water - water_stolen
+        print("The bandits steal", water_stolen, "Water")
+        print("You have:",amnt_water,"Left")
+
         
 
 
