@@ -153,7 +153,10 @@ def start_game():
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
       if user_choice == "stop" or user_choice == "Stop" or user_choice =="stp":
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
-          if what_buy ==
+          if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine") and dollars >15:
+            print("You have chosen to buy medicine")
+            
+
 
 
     if random_action ==7:
