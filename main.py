@@ -1,5 +1,5 @@
 from random import randrange    #Import random
-import time
+import time     
 
 def get_name():  
   global name      
@@ -153,8 +153,44 @@ def start_game():
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
       if user_choice == "stop" or user_choice == "Stop" or user_choice =="stp":
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
-          if what_buy ==
+        if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine" or what_buy == "med") and dollars > 15:
+          print("You have chosen to buy medicine")
+          print("You have:",dollars,"Dollars Left")
+          medicine_add = int(input("How much Medicine do you wish to buy?"))
+          medicine_amnt = medicine_amnt + medicine_add
+          dollars = dollars - medicine_add * 10
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+        elif (what_buy == "Food" or what_buy == "fd" or what_buy == "food") and dollars > 15:
+          print("You Have Chosen to buy food")
+          print("You have:",dollars,"Dollars Left")
+          food_add = str(input("How much food do you wish to buy?"))
+          amnt_food  = amnt_food - food_add
+          dollars = dollars - food_add * 10
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+        elif (what_buy == "wtr" or what_buy == "Water" or what_buy == "water") and dollars > 15:
+          print("You have chosen to buy water")
+          print("You have:",dollars,"Dollars Left") 
+          water_add = int(input("How much water do you want to buy?:"))
+          water_add = water_amnt + water_add
+          dollars = dollars - water_add * 1
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+        elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
+          print("You have chosen to buy Animals")
+          print("You have:",dollars,"Dollars Left") 
+          animal_add = int(input("How many animals do you want to buy?:"))
+          dollars = dollars - animal_add * 15
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
 
+          
+        
 
     if random_action ==7:
       print("===============")
@@ -206,15 +242,6 @@ def start_game():
 
 
          
-
-
-
-
-
-      
-
-
-
 
 
 def end_game():
