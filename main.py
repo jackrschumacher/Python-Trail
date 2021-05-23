@@ -145,7 +145,7 @@ def start_game():
         print("You have:",animal_amnt,"left")
         print("===============")
     
-    if random_action ==5:
+    if random_action ==5 and end_visit = False:
       print("===============")
       town_encountered = True
       end_visit = False
@@ -174,11 +174,23 @@ def start_game():
         elif (what_buy == "wtr" or what_buy == "Water" or what_buy == "water") and dollars > 15:
           print("You have chosen to buy water")
           print("You have:",dollars,"Dollars Left") 
+          water_add = int(input("How much water do you want to buy?:"))
           water_add = water_amnt + water_add
           dollars = dollars - water_add * 1
           print("You have:",dollars, "Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
+        elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
+          print("You have chosen to buy Animals")
+          print("You have:",dollars,"Dollars Left") 
+          animal_add = int(input("How many animals do you want to buy?:"))
+          dollars = dollars - animal_add * 15
+          print("You have:",dollars, "Remaining")
+          if dollars <=0:
+            print("You can not buy anything else, as you are out of money")
+
+          
+        
           
 
 
