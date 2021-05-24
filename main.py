@@ -136,6 +136,8 @@ def start_game():
           print("You capture the python and eat it")
           print("===============")
           amnt_food = amnt_food+2
+          print("You gain 2 food")
+          print("You have:",amnt_food,"Food in Total")
         elif hunt_random == 2:
           print("You capture the python, but it escapes")
           print("===============")
