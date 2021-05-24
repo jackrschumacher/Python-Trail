@@ -437,12 +437,23 @@ def start_game():
             print("You capture the Bufallo, but it escapes")
             print("===============")
 
-      if random action == 23:
+      if random_action == 23:
         print("===============")
         print("You find some settlers who offer to give you money if you help them")
         money_earned = randrange(5,56,1)
         print("You earn:",money_earned,"dollars")
         print("You have:",dollars,"dollars total")
+      
+      if random_action == 26 and amnt_food > 4:
+        print("===============")
+        print("Some of your food gets moldy")
+        food_lost = randrange(1,5,1)
+        print("You lose:",food_lost,"Food")
+        amnt_food = amnt_food - food_lost
+        print("You have",amnt_food,"Food remaining")
+      
+      
+        
 
 
 
