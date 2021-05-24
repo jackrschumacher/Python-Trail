@@ -451,8 +451,17 @@ def start_game():
         print("You lose:",food_lost,"Food")
         amnt_food = amnt_food - food_lost
         print("You have",amnt_food,"Food remaining")
+
+      if random_action == 29 and amnt_water > 4:
+        print("===============")
+        print("Some of your water gets stagnant")
+        water_lost = randrange(1,5,1)
+        print("You lose:",food_lost,"water")
+        amnt_water = amnt_water - water_lost
+        print("You have",amnt_water,"Water remaining")
+
       
-      
+
         
 
 
