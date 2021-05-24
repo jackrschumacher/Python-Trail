@@ -335,6 +335,13 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
+
+    if random_action == 15:
+      print("There is a flood on the trail, and you must go around.")
+      add_dist = randrange(1,51,1)
+      total_distance = total_distance + add_dist
+      print("You add",add_dist,"To your journey")
+      print("You have",total_distance,"Left to travel")
         
       
 
