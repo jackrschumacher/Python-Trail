@@ -249,26 +249,28 @@ def start_game():
       print("You encounter Bandits on your journey")
       bandit_random = randrange(1,5,1)
       type_of_item = randrange(1,5,1)
-      if type_of_item == 1:
+      if type_of_item == 1 and amnt_food > 4:
         food_stolen = bandit_random
         amnt_food = amnt_food - food_stolen
         print("The bandits steal", food_stolen,"Food")
         print("You have:",amnt_food,"Food Left")
-      elif type_of_item == 2:
+      elif type_of_item == 2 and amnt_water > 4:
         water_stolen = bandit_random
         amnt_water = amnt_water - water_stolen
         print("The bandits steal", water_stolen, "Water")
         print("You have:",amnt_water,"Left")
-      elif type_of_item == 3:
+      elif type_of_item == 3 and medicine_amnt > 4:
         medicine_stolen = bandit_random
         medicine_amnt = medicine_amnt - medicine_stolen
         print("The bandits steal:",medicine_stolen,"Medicine")
         print("You have:",medicine_amnt,"Left")
-      elif type_of_item == 4:
+      elif type_of_item == 4 and animal_amnt > 4:
         animals_stolen = bandit_random
         animal_amnt = animal_amnt - bandit_random
         print("The bandits Steal:",animals_stolen,"Animals")
         print("You have:",medicine_amnt,"Medicine")
+
+    
         
 
         
