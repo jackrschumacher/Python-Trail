@@ -259,6 +259,17 @@ def start_game():
         amnt_water = amnt_water - water_stolen
         print("The bandits steal", water_stolen, "Water")
         print("You have:",amnt_water,"Left")
+      elif type_of_item == 3:
+        medicine_stolen = bandit_random
+        medicine_amnt = medicine_amnt - medicine_stolen
+        print("The bandits steal:",medicine_stolen,"Medicine")
+        print("You have:",medicine_amnt,"Left")
+      elif type_of_item == 4:
+        animals_stolen = bandit_random
+        animal_amnt = animal_amnt - bandit_random
+        print("The bandits Steal:",animals_stolen,"Animals")
+        print("You have:",medicine_amnt,"Medicine")
+        
 
         
 
