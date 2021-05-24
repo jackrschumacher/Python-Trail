@@ -342,6 +342,27 @@ def start_game():
       total_distance = total_distance + add_dist
       print("You add",add_dist,"To your journey")
       print("You have",total_distance,"Left to travel")
+
+    if random_action == 17:
+      print("You find an abandoned wagon on the trail")
+      abandoned_wagon = randrange(1,4,1)
+      abandoned_wagon_supplies = randrange(1,16,1)
+
+      if abandoned_wagon == 1:
+        print("You find:",abandoned_wagon_supplies,"Food")
+        amnt_food = amnt_food + abandoned_wagon_supplies
+        print("You have",amnt_food,"Total Food")
+      elif abandoned_wagon == 2:
+        print("You find:",abandoned_wagon,"Water")
+        amnt_water = amnt_water + abandoned_wagon_supplies
+        print("You have:",amnt_water,"Total")
+      else:
+        print("You find:",abandoned_wagon,"Medicine")
+        medicine_amnt = medicine_amnt + abandoned_wagon
+        print("You have", medicine_amnt, "Total")
+
+
+
         
       
 
