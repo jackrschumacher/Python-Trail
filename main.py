@@ -418,6 +418,22 @@ def start_game():
             print("You can not buy anything else, as you are out of money")
       
       if random_action == 21:
+        print("===============")
+        print("You encounter a herd of bufallo")
+        if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
+          print("You attempt to hunt the Buffallo")
+          if hunt_random == 0:
+            print("You do not capture the Bufallo")
+            print("===============")
+          elif hunt_random ==1:
+            print("You capture the Bufallo and eat it")
+            print("===============")
+            amnt_food = amnt_food+2
+            print("You gain 2 food")
+            print("You have:",amnt_food,"Food in Total")
+          elif hunt_random == 2:
+            print("You capture the Bufallo, but it escapes")
+            print("===============")
 
 
 
