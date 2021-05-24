@@ -269,6 +269,15 @@ def start_game():
         animal_amnt = animal_amnt - bandit_random
         print("The bandits Steal:",animals_stolen,"Animals")
         print("You have:",medicine_amnt,"Medicine")
+    
+    if random_action == 11:
+      print("You have encountered a severe storm. You must wait one day.")
+      print("*****WAITING*****")
+      time.sleep(5)
+      
+    if random_action == 13:
+      
+
 
     
         
