@@ -246,6 +246,7 @@ def start_game():
         print("You have",animal_amnt,animal,"Left")
 
     if random_action == 9:
+      print("===============")
       print("You encounter Bandits on your journey")
       bandit_random = randrange(1,5,1)
       type_of_item = randrange(1,5,1)
@@ -276,6 +277,7 @@ def start_game():
       time.sleep(5)
 
     if random_action == 13:
+      print("===============")
       random_injury = randrange(1,4,1)
 
       if random_injury == 1:
@@ -337,6 +339,7 @@ def start_game():
           alive = False
 
     if random_action == 15:
+      print("===============")
       print("There is a flood on the trail, and you must go around.")
       add_dist = randrange(1,51,1)
       total_distance = total_distance + add_dist
@@ -344,6 +347,7 @@ def start_game():
       print("You have",total_distance,"Left to travel")
 
     if random_action == 17:
+      print("===============")
       print("You find an abandoned wagon on the trail")
       abandoned_wagon = randrange(1,4,1)
       abandoned_wagon_supplies = randrange(1,16,1)
@@ -364,6 +368,7 @@ def start_game():
     if random_action == 19:
       setller_encounter = True
       end_visit = False
+      print("===============")
       print("You have encountered a Settler Camp!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
       if user_choice == "stop" or user_choice == "Stop" or user_choice =="stp":
@@ -411,6 +416,9 @@ def start_game():
           print("You have:",dollars, "Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
+      
+      if random_action == 21:
+
 
 
         
