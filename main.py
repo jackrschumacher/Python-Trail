@@ -274,8 +274,68 @@ def start_game():
       print("You have encountered a severe storm. You must wait one day.")
       print("*****WAITING*****")
       time.sleep(5)
-      
+
     if random_action == 13:
+      random_injury = randrange(1,4,1)
+
+      if random_injury == 1:
+        survive = randrange (1,3,1)
+        print("You have contracted Dysentary")
+        print("There is no medicine")
+        if survive == 1:
+          print(name,"Has died of dysentary")
+        if survive == 2:
+          print(name,"Has Survived")
+      if random_injury == 2:
+        wait_amnt = randrange (1,6,1)
+        print(name,"Has a broken arm")
+        print("You need to wait",wait_amnt,"Days before you continue")
+        if wait_amnt == 1:
+          print("*****WAITING*****")
+          time.sleep(1)
+        elif wait_amnt == 2 and amnt_food > 4:
+          print("*****WAITING*****")
+          time.sleep()
+          stole_amnt = randrange(1,4,1)
+          print("While you were sleeping, animals stole",stole_amnt, "Food")
+          amnt_food = amnt_food - stole_amnt
+          print("You have:",amnt_food,"Left")
+        elif wait_amnt == 3:
+          print("*****WAITING*****")
+          time.sleep(3)
+        elif wait_amnt == 4 and amnt_water > 4:
+          print("*****WAITING*****")
+          time.sleep(4)
+          stole_amnt = randrange(1,4,1)
+          print("While you were sleeping, animals stole:",stole_amnt, "Water")
+          amnt_water = amnt_water - stole_amnt
+          print("You have",amnt_water,"Left")
+        elif wait_amnt ==5:
+          print("*****WAITING*****")
+          time.sleep(5)
+        elif wait_amnt == 6 and animal_amnt > 4:
+          print("*****WAITING*****")
+          time.sleep(6)
+          stole_amnt = randrange(1,4,1)
+          print("While you were waiting animals came and ate:",stole_amnt,"Animals")
+          animal_amnt = animal_amnt - stole_amnt
+          print("You have:", animal_amnt, "Left")
+      if random_injury == 3:
+        typhoid = True
+        print("===============")
+        print( name,"has contracted Typhoid ")
+        user_choice = ""
+        user_choice = str(input("Would you like to use medicine or continue(Type medicine or Continue)"))
+        if (user_choice == "medicine" or user_choice == "med" or user_choice == "Medicine") :
+          print("You are Cured!")
+          typhoid = False
+          print("===============")
+        else:
+          print( name,"has died!")
+          print("Game Over!")
+          print("===============")
+          alive = False
+        
       
 
 
