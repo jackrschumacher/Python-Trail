@@ -144,7 +144,7 @@ def start_game():
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal_amnt = animal_amnt-1
-        print("You have:",animal_amnt,"left")
+        print("You have:",animal_amnt,"Animals left")
         print("===============")
     
     if random_action ==5:
@@ -215,7 +215,7 @@ def start_game():
         elif frd_random ==1:
           print("You ford the river but lose 1 Water")
           water_amnt = water_amnt-1
-          print("You have",water_amnt,"Left")
+          print("You have",water_amnt,"Water Left")
         elif frd_random ==2:
           print("You ford the river")
         elif frd_random ==3:
@@ -227,7 +227,7 @@ def start_game():
         else:
           print("You ford the river, but lose 2 animals")
           animal_amnt = animal_amnt - 2
-          print("You have",animal_amnt,"left")
+          print("You have",animal_amnt,"Animals left")
       elif (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
         swm_random = randrange(0,2,1)
           
@@ -245,7 +245,7 @@ def start_game():
         animal_amnt = animal_amnt - 2
 
         print("While you waited, 2 animals died")
-        print("You have",animal_amnt,animal,"Left")
+        print("You have",animal_amnt,animal,"Animals Left")
 
     if random_action == 9:
       print("===============")
@@ -261,12 +261,12 @@ def start_game():
         water_stolen = bandit_random
         amnt_water = amnt_water - water_stolen
         print("The bandits steal", water_stolen, "Water")
-        print("You have:",amnt_water,"Left")
+        print("You have:",amnt_water,"Water Left")
       elif type_of_item == 3 and medicine_amnt > 4:
         medicine_stolen = bandit_random
         medicine_amnt = medicine_amnt - medicine_stolen
         print("The bandits steal:",medicine_stolen,"Medicine")
-        print("You have:",medicine_amnt,"Left")
+        print("You have:",medicine_amnt,"Medicine Left")
       elif type_of_item == 4 and animal_amnt > 4:
         animals_stolen = bandit_random
         animal_amnt = animal_amnt - bandit_random
@@ -303,11 +303,30 @@ def start_game():
           stole_amnt = randrange(1,4,1)
           print("While you were sleeping, animals stole",stole_amnt, "Food")
           amnt_food = amnt_food - stole_amnt
-          print("You have:",amnt_food,"Left")
+          print("You have:",amnt_food,"Food Left")
         elif wait_amnt == 3:
+          print("You encounter inclement weather and you must wait")
           print("*****WAITING*****")
           time.sleep(3)
-
+        elif wait_amnt == 4 and amnt_water > 4:
+          print("You encounter inclement weather and must wait")
+          print("*****WAITING*****")
+          time.sleep(4)
+          stole_amnt = randrange(1,4,1)
+          print("While you were sleeping, animals stole:",stole_amnt, "Water")
+          amnt_water = amnt_water - stole_amnt
+          print("You have",amnt_water,"Water Left")
+        elif wait_amnt ==5:
+          print("You encounter inclement weather and must wait")
+          print("*****WAITING*****")
+          time.sleep(5)
+        elif wait_amnt == 6 and animal_amnt > 4:
+          print("*****WAITING*****")
+          time.sleep(6)
+          stole_amnt = randrange(1,4,1)
+          print("While you were waiting animals came and ate:",stole_amnt,"Animals")
+          animal_amnt = animal_amnt - stole_amnt
+          print("You have:", animal_amnt, "Animals Left")
       if random_injury == 3:
         typhoid = True
         print("===============")
@@ -330,7 +349,7 @@ def start_game():
       add_dist = randrange(1,51,1)
       total_distance = total_distance + add_dist
       print("You add",add_dist,"To your journey")
-      print("You have",total_distance,"Left to travel")
+      print("You have",total_distance,"Miles Left to travel")
 
     if random_action == 17:
       print("===============")
