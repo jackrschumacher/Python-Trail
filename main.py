@@ -307,23 +307,7 @@ def start_game():
         elif wait_amnt == 3:
           print("*****WAITING*****")
           time.sleep(3)
-        elif wait_amnt == 4 and amnt_water > 4:
-          print("*****WAITING*****")
-          time.sleep(4)
-          stole_amnt = randrange(1,4,1)
-          print("While you were sleeping, animals stole:",stole_amnt, "Water")
-          amnt_water = amnt_water - stole_amnt
-          print("You have",amnt_water,"Left")
-        elif wait_amnt ==5:
-          print("*****WAITING*****")
-          time.sleep(5)
-        elif wait_amnt == 6 and animal_amnt > 4:
-          print("*****WAITING*****")
-          time.sleep(6)
-          stole_amnt = randrange(1,4,1)
-          print("While you were waiting animals came and ate:",stole_amnt,"Animals")
-          animal_amnt = animal_amnt - stole_amnt
-          print("You have:", animal_amnt, "Left")
+
       if random_injury == 3:
         typhoid = True
         print("===============")
