@@ -1,5 +1,6 @@
 from random import randrange    #Import random
-import time     
+import time 
+from graphics import*    
 
 def get_name():  
   global name      
@@ -492,6 +493,7 @@ def main():
   global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   
   print("Welcome to Python Trail")         #Running different functions, Main body
+  graphics()
   get_name()
   get_age()
   game_varsetup()
