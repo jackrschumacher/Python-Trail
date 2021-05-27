@@ -8,24 +8,27 @@ pygame.init()
 
 
 def loading_screen():
-  screen = pygame.display.set_mode([500,500])
-  size = width, height = 320,240
-  speed = [2,2]
-  black = 0, 0, 0
-  wagon = pygame.image.load("wagon.png")
-  wagonrect = wagon.get_rect()
   for x in range(100):
-    for event in pygame.event.get():
-      if event.type == pygame.QUIT: sys.exit()
+    screen = pygame.display.set_mode([500,500])
+    size = width, height = 320,240
+    speed = [2,2]
+    black = 0, 0, 0
+    wagon = pygame.image.load("wagon.png")
+    wagonrect = wagon.get_rect()
     
-    wagonrect = wagonrect.move(speed)
-    if wagonrect.left < 0 or wagonrect.right > width:
-      speed[0] = -speed[1]
-    if wagonrect.top < 0 or wagonrect.bottom > height:
-      speed[1] = -speed[1]
-    screen.fill(black)
-    screen.blit(wagon,wagonrect)
-    pygame.display.flip()
+    while 1:
+      for event in pygame.event.get():
+        if event.type == pygame.QUIT: sys.exit()
+      
+      wagonrect = wagonrect.move(speed)
+      if wagonrect.left < 0 or wagonrect.right > width:
+        speed[0] = -speed[1]
+      if wagonrect.top < 0 or wagonrect.bottom > height:
+        speed[1] = -speed[1]
+      screen.fill(black)
+      screen.blit(wagon,wagonrect)
+      pygame.display.flip()
+    
 
 
 
@@ -36,6 +39,8 @@ def get_name():
   global name      
   name = str(input("What is your name?"))
   print("Your name is,",name)
+  
+  town = pygame.image.load("Town.jpeg")
   
 
 def get_age():
