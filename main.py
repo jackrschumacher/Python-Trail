@@ -508,6 +508,8 @@ def main():
   global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
   
   print("Welcome to Python Trail")         #Running different functions, Main body
+  intro_screen()
+  main_title()
   get_name()
   get_age()
   game_varsetup()
