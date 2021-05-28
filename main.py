@@ -230,7 +230,7 @@ def start_game():
     if random_action ==7:
       print("===============")
       print("You have encountered a river")
-      river_encounter_graphics()
+      river_encountered_graphics()
       river_encountered = True
       user_choice = str(input("Would you like to swim or ford the river, or wait(cross,swim,wait)"))
 
@@ -384,6 +384,7 @@ def start_game():
 
     if random_action == 17:
       print("===============")
+      wagon_abandoned_graphics()
       print("You find an abandoned wagon on the trail")
       abandoned_wagon = randrange(1,4,1)
       abandoned_wagon_supplies = randrange(1,16,1)
@@ -404,6 +405,7 @@ def start_game():
     if random_action == 19:
       setller_encounter = True
       end_visit = False
+      settler_camp_graphics()
       print("===============")
       print("You have encountered a Settler Camp!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
@@ -455,6 +457,7 @@ def start_game():
       
       if random_action == 21:
         print("===============")
+        bufallo_graphics()
         print("You encounter a herd of bufallo")
         if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
           print("You attempt to hunt the Buffallo")
@@ -473,6 +476,7 @@ def start_game():
 
       if random_action == 23:
         print("===============")
+        money_graphics()
         print("You find some settlers who offer to give you money if you help them")
         money_earned = randrange(5,56,1)
         print("You earn:",money_earned,"dollars")

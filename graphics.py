@@ -231,7 +231,7 @@ def random_injury_graphics():
   y = 20
   pygame.display.set_caption('Ford')
   screen.fill((0,0,0))
-  image = pygame.image.load("ijury.jpeg")
+  image = pygame.image.load("injury.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
 
@@ -245,10 +245,44 @@ def flood_graphics():
   pygame.display.flip()
 
 
-
-
-
   
+def wagon_abandoned_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Abandoned Wagon')
+  screen.fill((0,0,0))
+  image = pygame.image.load("wagonbroken.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def settler_camp_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Abandoned Wagon')
+  screen.fill((0,0,0))
+  image = pygame.image.load("wagonbroken.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def buffallo_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Abandoned Wagon')
+  screen.fill((0,0,0))
+  image = pygame.image.load("bufallo.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def money_graphics():#Add
+   x = 10
+  y = 20
+  pygame.display.set_caption('Abandoned Wagon')
+  screen.fill((0,0,0))
+  image = pygame.image.load("bufallo.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+
 
 
 
