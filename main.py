@@ -95,6 +95,13 @@ def start_game():
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
     print("*****TRAVELING*****")
+    random_terr = randrange(1,6,1)
+
+    if random_terr == 1:
+      desert()
+    elif random_ter == 2:
+      jungle()
+    elif random_terr
     time.sleep(1.25)
     print("You have Traveled:",wagon_dist_traveled,"Miles In Total")
     print("You traveled,", distance_traveled,"Miles Today")
