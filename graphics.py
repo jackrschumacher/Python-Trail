@@ -1,11 +1,12 @@
+
 import sys, pygame
 pygame.init()
 import time
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int
 
-width = 300;
-height = 300
+width = 400;
+height = 400
 
 white = (225,255,255)
 green = (0,255,0)
@@ -25,13 +26,24 @@ def intro_screen():
   time.sleep(5)
 
 def main_title():
-  x = 0
-  y = 0
-  display_surface = pygame.display.set_mode((x, y))
+  x = 10
+  y = 20
   pygame.display.set_caption('Python Trail')
-  text = font.render('Python Trail',True, green, blue)
-  text_rectangle = text.get_rect()
-  text_rectangle.center = (x // 2, y // 2)
-  display_surface.fill(white)
-  display_surface.blit(text,text_rectangle)
+  image = pygame.image.load("largewagon.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+  time.sleep(5)
+
+def general_store():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Python Trail')
+  image = pygame.image.load("Town.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+  time.sleep(5)
+
+
+
+
 

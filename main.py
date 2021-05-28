@@ -33,8 +33,9 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   dollars = 400
+  general_store()
 
 
   print("You have",dollars, "dollars to spend")
@@ -62,6 +63,7 @@ def game_varsetup():     #Buy Supplies
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
+  var_int = False
 
 
 #END
@@ -70,7 +72,7 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
@@ -505,7 +507,7 @@ def end_game():
   
 def main():
   #END
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   
   print("Welcome to Python Trail")         #Running different functions, Main body
   intro_screen()
@@ -517,7 +519,7 @@ def main():
   if alive == True:
     end_game()
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int
 main()
 
 
