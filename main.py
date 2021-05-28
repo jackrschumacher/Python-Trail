@@ -159,18 +159,7 @@ def start_game():
       hunt_random = randrange(0,3,1)
       if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
         print("You attempt to hunt the python")
-        if hunt_random == 0:
-          print("You do not capture the python")
-          print("===============")
-        elif hunt_random ==1:
-          print("You capture the python and eat it")
-          print("===============")
-          amnt_food = amnt_food+2
-          print("You gain 2 food")
-          print("You have:",amnt_food,"Food in Total")
-        elif hunt_random == 2:
-          print("You capture the python, but it escapes")
-          print("===============")
+        hunt()
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal_amnt = animal_amnt-1
@@ -179,7 +168,7 @@ def start_game():
     
     if random_action ==5:
       print("===============")
-      town_encountered = True
+      town_encountered()
       end_visit = False
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
@@ -329,7 +318,7 @@ def start_game():
           time.sleep(1)
         elif wait_amnt == 2 and amnt_food > 4:
           print("*****WAITING*****")
-          time.sleep()
+          time.sleep(1)
           stole_amnt = randrange(1,4,1)
           print("While you were sleeping, animals stole",stole_amnt, "Food")
           amnt_food = amnt_food - stole_amnt
