@@ -128,12 +128,14 @@ def start_game():
         print( name,"has died!")
         print("Game Over!")
         print("===============")
+        alive_false()
         alive = False
 
     if random_action == 2:
       wagon_broken = True
       print("===============")
       print("Your Wagon has broken down")
+      wagon_broken_graphics()
       user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
       if (user_choice == "Spare" or user_choice == "spare" or user_choice == "spr"):
         wagon_broken = False
@@ -143,13 +145,16 @@ def start_game():
         print(name,"Starved")
         print( name,"has died!")
         print("Game Over!")
+        alive_false()
         print("===============")
         alive = False
       elif amnt_food > 0: 
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
+        wild_animals()
         print("===============")
+
     
         
     if random_action == 4:
@@ -169,7 +174,7 @@ def start_game():
     
     if random_action ==5:
       print("===============")
-      town_encountered()
+      town_encountered_graphics()
       end_visit = False
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
@@ -225,6 +230,7 @@ def start_game():
     if random_action ==7:
       print("===============")
       print("You have encountered a river")
+      river_encounter_graphics()
       river_encountered = True
       user_choice = str(input("Would you like to swim or ford the river, or wait(cross,swim,wait)"))
 

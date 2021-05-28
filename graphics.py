@@ -100,7 +100,7 @@ def grassland():
   screen.blit(image,(x,y))
   pygame.display.flip()
 
-def town_encountered():
+def town_encountered_graphics():
   x = 10
   y = 20
   pygame.display.set_caption('You have encountered a Town!')
@@ -171,6 +171,38 @@ def alive_false():
   image = pygame.image.load("gameover.png")
   screen.blit(image,(x,y))
   pygame.display.flip()
+
+def wagon_broken_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Wagon Broken')
+  screen.fill((0,0,0))
+  image = pygame.image.load("wagonbroken.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def wild_animals():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Wild Animals')
+  screen.fill((0,0,0))
+  image = pygame.image.load("wild_animals")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def river_encountered_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('River')
+  screen.fill((0,0,0))
+  image = pygame.image.load("river.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+
+  
+
+
 
 
 
