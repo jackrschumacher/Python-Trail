@@ -52,7 +52,6 @@ def general_store():
   image = pygame.image.load("Town.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-  time.sleep(5)
 
 def desert():
   x = 10
@@ -109,7 +108,7 @@ def town_encountered():
   image = pygame.image.load("Town.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-
+'''
 def hunt():
   dis = pygame.display.set_mode((400,300))
   pygame.display.update()
@@ -145,7 +144,7 @@ def hunt():
   pygame.draw.rect(dis,blue,[200,150,10,10])
   pygame.display.update()
   quit()
-
+'''
 
 
 

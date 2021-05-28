@@ -159,7 +159,7 @@ def start_game():
       hunt_random = randrange(0,3,1)
       if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
         print("You attempt to hunt the python")
-        hunt()
+        #hunt()
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal_amnt = animal_amnt-1
