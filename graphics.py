@@ -55,41 +55,41 @@ def general_store():
   time.sleep(5)
 
 def desert():
-    x = 10
+  x = 10
   y = 20
-  pygame.display.set_caption('General Store')
+  pygame.display.set_caption('Traveling')
   screen.fill((0,0,0))
-  image = pygame.image.load("Town.jpeg")
+  image = pygame.image.load("desert.jpg")
   screen.blit(image,(x,y))
   pygame.display.flip()
   time.sleep(5)
 
 def forest():
-    x = 10
+  x = 10
   y = 20
-  pygame.display.set_caption('General Store')
+  pygame.display.set_caption('Traveling')
   screen.fill((0,0,0))
-  image = pygame.image.load("Town.jpeg")
+  image = pygame.image.load("forest.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
   time.sleep(5)
 
 def jungle():
-    x = 10
+  x = 10
   y = 20
-  pygame.display.set_caption('General Store')
+  pygame.display.set_caption('Traveling')
   screen.fill((0,0,0))
-  image = pygame.image.load("Town.jpeg")
+  image = pygame.image.load("jungle.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
   time.sleep(5)
 
 def mountians():
-    x = 10
+  x = 10
   y = 20
-  pygame.display.set_caption('General Store')
+  pygame.display.set_caption('Traveling')
   screen.fill((0,0,0))
-  image = pygame.image.load("Town.jpeg")
+  image = pygame.image.load("mountain.jpg")
   screen.blit(image,(x,y))
   pygame.display.flip()
   time.sleep(5)

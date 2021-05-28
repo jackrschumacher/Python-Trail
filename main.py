@@ -99,9 +99,12 @@ def start_game():
 
     if random_terr == 1:
       desert()
-    elif random_ter == 2:
+    elif random_terr == 2:
       jungle()
-    elif random_terr
+    elif random_terr == 3:
+      mountians()
+    elif random_terr == 5:
+      forest()
     time.sleep(1.25)
     print("You have Traveled:",wagon_dist_traveled,"Miles In Total")
     print("You traveled,", distance_traveled,"Miles Today")
