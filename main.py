@@ -236,6 +236,7 @@ def start_game():
 
       if (user_choice == "ford" or user_choice =="Ford" or user_choice =="frd"):
         frd_random = randrange(0,6,1)
+        ford_graphics()
         if frd_random ==0:
           print("You cross the river and lose no supplies")
         elif frd_random ==1:
@@ -256,7 +257,7 @@ def start_game():
           print("You have",animal_amnt,"Animals left")
       elif (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
         swm_random = randrange(0,2,1)
-          
+        river_encountered_graphics()
         if swm_random == 0:
           print("You cross the river")
         else:
@@ -265,10 +266,12 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
+          alive_false()
       elif (user_choice == "wait" or user_choice =="Wait" or user_choice == "wt"):
         print("*****WAITING*****")
         time.sleep(5)
         animal_amnt = animal_amnt - 2
+        river_encountered_graphics()
 
         print("While you waited, 2 animals died")
         print("You have",animal_amnt,animal,"Animals Left")
@@ -300,6 +303,7 @@ def start_game():
         print("You have:",medicine_amnt,"Medicine")
     
     if random_action == 11:
+      storm_graphics()
       print("You have encountered a severe storm. You must wait one day.")
       print("*****WAITING*****")
       time.sleep(5)
@@ -307,7 +311,7 @@ def start_game():
     if random_action == 13:
       print("===============")
       random_injury = randrange(1,4,1)
-
+      random_injury_graphics()
       if random_injury == 1:
         survive = randrange (1,3,1)
         print("You have contracted Dysentary")
@@ -371,6 +375,7 @@ def start_game():
 
     if random_action == 15:
       print("===============")
+      flood_graphics()
       print("There is a flood on the trail, and you must go around.")
       add_dist = randrange(1,51,1)
       total_distance = total_distance + add_dist

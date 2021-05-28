@@ -199,6 +199,54 @@ def river_encountered_graphics():
   screen.blit(image,(x,y))
   pygame.display.flip()
 
+def ford_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Ford')
+  screen.fill((0,0,0))
+  image = pygame.image.load("barge.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def bandits_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Bandits')
+  screen.fill((0,0,0))
+  image = pygame.image.load("bandits.png")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def storm_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Storm')
+  screen.fill((0,0,0))
+  image = pygame.image.load("stormgraphics.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+  
+def random_injury_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Ford')
+  screen.fill((0,0,0))
+  image = pygame.image.load("ijury.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def flood_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Flood')
+  screen.fill((0,0,0))
+  image = pygame.image.load("flood.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+
+
+
 
   
 
