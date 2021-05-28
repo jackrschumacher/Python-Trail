@@ -103,8 +103,10 @@ def start_game():
       jungle()
     elif random_terr == 3:
       mountians()
-    elif random_terr == 5:
+    elif random_terr == 4:
       forest()
+    elif random_terr == 5:
+      grassland()
     time.sleep(1.25)
     print("You have Traveled:",wagon_dist_traveled,"Miles In Total")
     print("You traveled,", distance_traveled,"Miles Today")

@@ -62,7 +62,7 @@ def desert():
   image = pygame.image.load("desert.jpg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-  time.sleep(5)
+  
 
 def forest():
   x = 10
@@ -72,7 +72,6 @@ def forest():
   image = pygame.image.load("forest.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-  time.sleep(5)
 
 def jungle():
   x = 10
@@ -82,7 +81,7 @@ def jungle():
   image = pygame.image.load("jungle.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-  time.sleep(5)
+
 
 def mountians():
   x = 10
@@ -92,7 +91,16 @@ def mountians():
   image = pygame.image.load("mountain.jpg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-  time.sleep(5)
+
+def grassland():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Traveling')
+  screen.fill((0,0,0))
+  image = pygame.image.load("grassland.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
 
 
 
