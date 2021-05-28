@@ -115,6 +115,11 @@ def hunt():
   pygame.display.update()
   pygame.display.set_caption('Hunting')
   game_over = False
+
+  def message(msg,color):
+    mesg = font_style.render(msg,True,color)
+    dis.blit(mesg, [dis_width/2, dis_height/2])
+
   while game_over == False:
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
