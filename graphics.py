@@ -146,6 +146,37 @@ def hunt():
   quit()
 '''
 
+def cholera_graphics():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Cholera')
+  screen.fill((0,0,0))
+  image = pygame.image.load("cholera.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+def alive_false():
+  x = 10
+  y = 20
+  pygame.display.set_caption('Game Over')
+  screen.fill((0,0,0))
+  image = pygame.image.load("skull.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+  time.sleep(3)
+  x = 10
+  y = 20
+  pygame.display.set_caption('Game Over')
+  screen.fill((0,0,0))
+  image = pygame.image.load("gameover.png")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+
+
+
+
+
+
 
 
 

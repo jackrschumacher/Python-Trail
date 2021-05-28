@@ -115,6 +115,7 @@ def start_game():
     
     if random_action ==1:
       cholera = True
+      cholera_graphics()
       print("===============")
       print( name,"has contracted Cholera")
       user_choice = ""
