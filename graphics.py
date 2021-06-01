@@ -123,8 +123,9 @@ def hunt():
   db["Four_Letter"] = "Test","Able","Band","Care","Cast","Cool","Nice","Know","Hunt","Zone"
   value = db["Four_Letter"]
   print(value)
-  matches = db.keys()
+  keys = db.keys()
   print("How long of a word would you like to type")
+
   strt_time = time.perf_counter()
 
 
