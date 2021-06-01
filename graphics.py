@@ -258,9 +258,9 @@ def wagon_abandoned_graphics():
 def settler_camp_graphics():
   x = 10
   y = 20
-  pygame.display.set_caption('Abandoned Wagon')
+  pygame.display.set_caption('Settler Camp')
   screen.fill((0,0,0))
-  image = pygame.image.load("wagonbroken.jpeg")
+  image = pygame.image.load("tent.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
 
@@ -269,16 +269,16 @@ def buffallo_graphics():
   y = 20
   pygame.display.set_caption('Abandoned Wagon')
   screen.fill((0,0,0))
-  image = pygame.image.load("bufallo.jpeg")
+  image = pygame.image.load("wagonbroken.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
 
 def money_graphics():#Add
-   x = 10
+  x = 10
   y = 20
-  pygame.display.set_caption('Abandoned Wagon')
+  pygame.display.set_caption('Money')
   screen.fill((0,0,0))
-  image = pygame.image.load("bufallo.jpeg")
+  image = pygame.image.load("money.png")
   screen.blit(image,(x,y))
   pygame.display.flip()
 
