@@ -229,7 +229,7 @@ def storm_graphics():
 def random_injury_graphics():
   x = 10
   y = 20
-  pygame.display.set_caption('Ford')
+  pygame.display.set_caption('Injury')
   screen.fill((0,0,0))
   image = pygame.image.load("injury.jpeg")
   screen.blit(image,(x,y))
