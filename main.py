@@ -1,11 +1,26 @@
 from random import randrange    #Import random
 import time 
-from graphics import*    
+from graphics import *
+import sys, pygame
+pygame.init()
+
+
+
+
+
+
+
+
+
+
 
 def get_name():  
   global name      
   name = str(input("What is your name?"))
   print("Your name is,",name)
+  
+  town = pygame.image.load("Town.jpeg")
+  
   
 
 def get_age():
@@ -18,8 +33,9 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   dollars = 400
+  general_store()
 
 
   print("You have",dollars, "dollars to spend")
@@ -47,6 +63,7 @@ def game_varsetup():     #Buy Supplies
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
   print("\n\n\n")
+  var_int = False
 
 
 #END
@@ -55,7 +72,7 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   print("LOADING...")
   print("===============")
   print("You begin in Wisconsin and Travel to Flordia")
@@ -78,6 +95,18 @@ def start_game():
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
     print("*****TRAVELING*****")
+    random_terr = randrange(1,6,1)
+
+    if random_terr == 1:
+      desert()
+    elif random_terr == 2:
+      jungle()
+    elif random_terr == 3:
+      mountians()
+    elif random_terr == 4:
+      forest()
+    elif random_terr == 5:
+      grassland()
     time.sleep(1.25)
     print("You have Traveled:",wagon_dist_traveled,"Miles In Total")
     print("You traveled,", distance_traveled,"Miles Today")
@@ -86,6 +115,7 @@ def start_game():
     
     if random_action ==1:
       cholera = True
+      cholera_graphics()
       print("===============")
       print( name,"has contracted Cholera")
       user_choice = ""
@@ -98,12 +128,14 @@ def start_game():
         print( name,"has died!")
         print("Game Over!")
         print("===============")
+        alive_false()
         alive = False
 
     if random_action == 2:
       wagon_broken = True
       print("===============")
       print("Your Wagon has broken down")
+      wagon_broken_graphics()
       user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
       if (user_choice == "Spare" or user_choice == "spare" or user_choice == "spr"):
         wagon_broken = False
@@ -113,13 +145,16 @@ def start_game():
         print(name,"Starved")
         print( name,"has died!")
         print("Game Over!")
+        alive_false()
         print("===============")
         alive = False
       elif amnt_food > 0: 
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
+        wild_animals()
         print("===============")
+
     
         
     if random_action == 4:
@@ -130,18 +165,7 @@ def start_game():
       hunt_random = randrange(0,3,1)
       if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
         print("You attempt to hunt the python")
-        if hunt_random == 0:
-          print("You do not capture the python")
-          print("===============")
-        elif hunt_random ==1:
-          print("You capture the python and eat it")
-          print("===============")
-          amnt_food = amnt_food+2
-          print("You gain 2 food")
-          print("You have:",amnt_food,"Food in Total")
-        elif hunt_random == 2:
-          print("You capture the python, but it escapes")
-          print("===============")
+        #hunt()
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal_amnt = animal_amnt-1
@@ -150,7 +174,7 @@ def start_game():
     
     if random_action ==5:
       print("===============")
-      town_encountered = True
+      town_encountered_graphics()
       end_visit = False
       print("You have encountered a town!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
@@ -206,11 +230,13 @@ def start_game():
     if random_action ==7:
       print("===============")
       print("You have encountered a river")
+      river_encountered_graphics()
       river_encountered = True
       user_choice = str(input("Would you like to swim or ford the river, or wait(cross,swim,wait)"))
 
       if (user_choice == "ford" or user_choice =="Ford" or user_choice =="frd"):
         frd_random = randrange(0,6,1)
+        ford_graphics()
         if frd_random ==0:
           print("You cross the river and lose no supplies")
         elif frd_random ==1:
@@ -231,7 +257,7 @@ def start_game():
           print("You have",animal_amnt,"Animals left")
       elif (user_choice == "swim" or user_choice == "Swim" or user_choice == "swm"):
         swm_random = randrange(0,2,1)
-          
+        river_encountered_graphics()
         if swm_random == 0:
           print("You cross the river")
         else:
@@ -240,10 +266,12 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
+          alive_false()
       elif (user_choice == "wait" or user_choice =="Wait" or user_choice == "wt"):
         print("*****WAITING*****")
         time.sleep(5)
         animal_amnt = animal_amnt - 2
+        river_encountered_graphics()
 
         print("While you waited, 2 animals died")
         print("You have",animal_amnt,animal,"Animals Left")
@@ -275,6 +303,7 @@ def start_game():
         print("You have:",medicine_amnt,"Medicine")
     
     if random_action == 11:
+      storm_graphics()
       print("You have encountered a severe storm. You must wait one day.")
       print("*****WAITING*****")
       time.sleep(5)
@@ -282,7 +311,7 @@ def start_game():
     if random_action == 13:
       print("===============")
       random_injury = randrange(1,4,1)
-
+      random_injury_graphics()
       if random_injury == 1:
         survive = randrange (1,3,1)
         print("You have contracted Dysentary")
@@ -300,7 +329,7 @@ def start_game():
           time.sleep(1)
         elif wait_amnt == 2 and amnt_food > 4:
           print("*****WAITING*****")
-          time.sleep()
+          time.sleep(1)
           stole_amnt = randrange(1,4,1)
           print("While you were sleeping, animals stole",stole_amnt, "Food")
           amnt_food = amnt_food - stole_amnt
@@ -346,6 +375,7 @@ def start_game():
 
     if random_action == 15:
       print("===============")
+      flood_graphics()
       print("There is a flood on the trail, and you must go around.")
       add_dist = randrange(1,51,1)
       total_distance = total_distance + add_dist
@@ -354,6 +384,7 @@ def start_game():
 
     if random_action == 17:
       print("===============")
+      wagon_abandoned_graphics()
       print("You find an abandoned wagon on the trail")
       abandoned_wagon = randrange(1,4,1)
       abandoned_wagon_supplies = randrange(1,16,1)
@@ -374,6 +405,7 @@ def start_game():
     if random_action == 19:
       setller_encounter = True
       end_visit = False
+      settler_camp_graphics()
       print("===============")
       print("You have encountered a Settler Camp!")
       user_choice = str(input("Would you like to continue or stop and buy Supplies (Continue or Stop)"))
@@ -425,6 +457,7 @@ def start_game():
       
       if random_action == 21:
         print("===============")
+        bufallo_graphics()
         print("You encounter a herd of bufallo")
         if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
           print("You attempt to hunt the Buffallo")
@@ -443,6 +476,7 @@ def start_game():
 
       if random_action == 23:
         print("===============")
+        money_graphics()
         print("You find some settlers who offer to give you money if you help them")
         money_earned = randrange(5,56,1)
         print("You earn:",money_earned,"dollars")
@@ -490,10 +524,11 @@ def end_game():
   
 def main():
   #END
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
   
   print("Welcome to Python Trail")         #Running different functions, Main body
-  graphics()
+  intro_screen()
+  main_title()
   get_name()
   get_age()
   game_varsetup()
@@ -501,7 +536,7 @@ def main():
   if alive == True:
     end_game()
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int
 main()
 
 
