@@ -62,6 +62,10 @@ def game_varsetup():     #Buy Supplies
   print("You have purchased,",medicine_amnt,"Medicine")
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
+  location_start = int(input("Where would you like to start: "))
+  print("You will start in:",location_start)
+  location_end = int(input("Where would you like to end:"))
+  print("You will start in:",location_end)
   print("\n\n\n")
   var_int = False
 
