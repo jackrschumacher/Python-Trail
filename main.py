@@ -1,4 +1,4 @@
-from replit import db
+
 from random import randrange    #Import random
 import time 
 from graphics import *
@@ -63,9 +63,9 @@ def game_varsetup():     #Buy Supplies
   print("You have purchased,",medicine_amnt,"Medicine")
   dollars = dollars - medicine_amnt * 10
   print("You have:",dollars,"Dollars Remaining")
-  location_start = int(input("Where would you like to start: "))
+  location_start = str(input("Where would you like to start: "))
   print("You will start in:",location_start)
-  location_end = int(input("Where would you like to end:"))
+  location_end = str(input("Where would you like to end:"))
   print("You will start in:",location_end)
   print("\n\n\n")
   var_int = False
@@ -177,12 +177,11 @@ def start_game():
         print("Invalid")
       elif word_len == 4:
         print("Length of 4 Selected")
-        db["Four_Letter"] = "Test","Able","Band","Care","Cast","Cool","Nice","Know","Hunt","Zone"
-        value = db["Four_Letter"]
-        keys = db.keys()
+        four_letter = "Cool", "Nice"
+        print(four_letter)
       elif word_len == 5:
         print("Length of 5 Selected")
-        db["Five Letter"] = "Hello","Jumpy","Jimmy","Crazy"
+        five_letter = "Testt"
       elif word_len == 6:
         print("Length of six Selected")
       else:
@@ -190,11 +189,11 @@ def start_game():
       
 
   
-      else:
-        print("The python comes back when you are sleeping and Kills one of your",animal)
-        animal_amnt = animal_amnt-1
-        print("You have:",animal_amnt,"Animals left")
-        print("===============")
+    else:
+      print("The python comes back when you are sleeping and Kills one of your",animal)
+      animal_amnt = animal_amnt-1
+      print("You have:",animal_amnt,"Animals left")
+      print("===============")
     
     if random_action ==5:
       print("===============")
