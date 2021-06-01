@@ -177,7 +177,7 @@ def start_game():
         print("Invalid")
       elif word_len == 4:
         print("Length of 4 Selected")
-        four_letter = "Cool", "Nice"
+        four_letter = "Cool", "Nice", "Jazz", "Able", "Baby", "Band", 
         print(four_letter)
       elif word_len == 5:
         print("Length of 5 Selected")
@@ -189,11 +189,6 @@ def start_game():
       
 
   
-    else:
-      print("The python comes back when you are sleeping and Kills one of your",animal)
-      animal_amnt = animal_amnt-1
-      print("You have:",animal_amnt,"Animals left")
-      print("===============")
     
     if random_action ==5:
       print("===============")
