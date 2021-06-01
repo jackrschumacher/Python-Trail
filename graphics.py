@@ -1,4 +1,4 @@
-
+from replit import db
 import sys, pygame
 pygame.init()
 import time
@@ -108,11 +108,33 @@ def town_encountered_graphics():
   image = pygame.image.load("Town.jpeg")
   screen.blit(image,(x,y))
   pygame.display.flip()
-'''
+
 def hunt():
+  
+  db["Four_Letter"] = "Test","Able","Band","Care","Cast","Cool","Nice","Know","Hunt","Zone"
+  x = 10
+  y = 20
+  pygame.display.set_caption('Python')
+  screen.fill((0,0,0))
+  image = pygame.image.load("python.jpeg")
+  screen.blit(image,(x,y))
+  pygame.display.flip()
+  
+  db["Four_Letter"] = "Test","Able","Band","Care","Cast","Cool","Nice","Know","Hunt","Zone"
+  value = db["Four_Letter"]
+  print(value)
+  matches = db.keys()
+  print("How long of a word would you like to type")
+  strt_time = time.perf_counter()
+
+
+
+  '''
   dis = pygame.display.set_mode((400,300))
   pygame.display.update()
   pygame.display.set_caption('Hunting')
+
+  
   game_over = False
 
   def message(msg,color):
