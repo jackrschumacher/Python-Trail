@@ -1,3 +1,4 @@
+from replit import db
 from random import randrange    #Import random
 import time 
 from graphics import *
@@ -169,7 +170,26 @@ def start_game():
       hunt_random = randrange(0,3,1)
       if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
         print("You attempt to hunt the python")
-        hunt()
+          
+      
+      word_len = int(input("How long of a word would you like to type: "))
+      if word_len <= 3:
+        print("Invalid")
+      elif word_len == 4:
+        print("Length of 4 Selected")
+        db["Four_Letter"] = "Test","Able","Band","Care","Cast","Cool","Nice","Know","Hunt","Zone"
+        value = db["Four_Letter"]
+        keys = db.keys()
+      elif word_len == 5:
+        print("Length of 5 Selected")
+        db["Five Letter"] = "Hello","Jumpy","Jimmy","Crazy"
+      elif word_len == 6:
+        print("Length of six Selected")
+      else:
+        print("Invalid")
+      
+
+  
       else:
         print("The python comes back when you are sleeping and Kills one of your",animal)
         animal_amnt = animal_amnt-1
