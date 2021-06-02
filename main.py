@@ -2,6 +2,8 @@
 from random import randrange    #Import random
 import time 
 from graphics import *
+from data import *
+from replit import db
 import sys, pygame
 pygame.init()
 
@@ -19,6 +21,7 @@ def get_name():
   global name      
   name = str(input("What is your name?"))
   print("Your name is,",name)
+  
   
   town = pygame.image.load("Town.jpeg")
   
