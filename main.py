@@ -176,6 +176,7 @@ def start_game():
       if word_len <= 3:
         print("Invalid")
       elif word_len == 4:
+
         print("Length of 4 Selected")
         four_letter = "Cool", "Nice", "Jazz", "Able", "Baby", "Band", "Have"
         random_word = four_letter[hunt_random]
@@ -185,8 +186,11 @@ def start_game():
         print("Set")
         time.sleep(1)
         print("Go")
+
         word = str(input("Please enter the word:"))
-        if word == random_word:
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time < future:
           print("You have Captured the Python")
           print("You add two food")
           amnt_food = amnt_food + 2
@@ -204,7 +208,9 @@ def start_game():
         time.sleep(1)
         print("Go")
         word = str(input("Please enter the word:"))
-        if word == random_word:
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time > future:
           print("You have Captured the Python")
           print("You add two food")
           amnt_food = amnt_food + 2
@@ -225,7 +231,9 @@ def start_game():
         time.sleep(1)
         print("Go")
         word = str(input("Please enter the word:"))
-        if word == random_word:
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time > future:
           print("You have Captured the Python")
           print("You add two food")
           amnt_food = amnt_food + 2
