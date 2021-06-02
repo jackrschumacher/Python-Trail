@@ -34,27 +34,27 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
   dollars = 400
   general_store()
 
 
-  print("You have",dollars, "dollars to spend")
+  print("You have",dollars, "PyCoin to spend")
   amnt_food = int(input("Please enter the amount of food you wish to have(food costs $10 per pound):"))
   print("You have chosen to buy", amnt_food,"Pounds of food")
   dollars = dollars-amnt_food * 10
-  print("You have,",dollars,"dollars remaining")
+  print("You have,",dollars,"PyCoin remaining")
   amnt_water = int(input("Please enter the amount of water you wish to carry(Water 1 Dollar per gallon):"))
   print("You purchased:",amnt_water,"Water")
   dollars = dollars-amnt_water * 2
-  print("You have,",dollars,"dollars remaining")
+  print("You have,",dollars,"PyCoin remaining")
   animal = str(input("Please enter the animal you would like to pull your wagon-singular:"))
   animal =animal+"s"
   print("You Have Chosen:",animal,"To pull your wagon")
   animal_amnt = int(input("Please enter the number of animals you wish to pull your wagon ($15)"))  
   print("You purchased,",animal_amnt,"Animals")
   dollars = dollars-animal_amnt
-  print("You have,",dollars,"Dollars Remaining")
+  print("You have,",dollars,"PyCoin Remaining")
   spareprts_amnt = int(input("Please enter the number of spare parts you wish to have(10)"))
   print("You have,",spareprts_amnt,"Spare Parts")
   dollars = dollars - spareprts_amnt * 10
@@ -62,7 +62,7 @@ def game_varsetup():     #Buy Supplies
   medicine_amnt = int(input("Please enter the amount of medicine you wish to buy ($10)"))
   print("You have purchased,",medicine_amnt,"Medicine")
   dollars = dollars - medicine_amnt * 10
-  print("You have:",dollars,"Dollars Remaining")
+  print("You have:",dollars,"PyCoin Remaining")
   location_start = str(input("Where would you like to start: "))
   print("You will start in:",location_start)
   location_end = str(input("Where would you like to end:"))
@@ -77,10 +77,10 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_end, location_start
   print("LOADING...")
   print("===============")
-  print("You begin in Wisconsin and Travel to Flordia")
+  print("You begin in",location_start,"and Travel to",location_end)
   total_distance = 0        #Distance in total, this willbe length of journey
   total_distance = randrange(500,2001,1)       #500-2000 miles, intervals of 1
   print("You have",total_distance,"Miles to Travel")
@@ -256,13 +256,13 @@ def start_game():
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
         if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine" or what_buy == "med") and dollars > 15:
           print("You have chosen to buy medicine")
-          print("You have:",dollars,"Dollars Left")
+          print("You have:",dollars,"PyCoin Left")
           medicine_add = int(input("How much Medicine do you wish to buy?"))
           if medicine_add == "Quit" or medicine_add == "Qut" or medicine_add == "quit":
             print("You have chosen to Quit")
           medicine_amnt = medicine_amnt + medicine_add
           dollars = dollars - medicine_add * 10
-          print("You have:",dollars, "Remaining")
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Food" or what_buy == "fd" or what_buy == "food") and dollars > 15:
@@ -273,28 +273,28 @@ def start_game():
             print("You have chosen to Quit")
           amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
-          print("You have:",dollars, "Remaining")
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "wtr" or what_buy == "Water" or what_buy == "water") and dollars > 15:
           print("You have chosen to buy water")
-          print("You have:",dollars,"Dollars Left") 
+          print("You have:",dollars,"PyCoin Left") 
           water_add = int(input("How much water do you want to buy?:"))
           if water_add == "Quit" or water_add == "Qut" or water_add == "quit":
             print("You have chosen to Quit")
           water_amnt = water_amnt + water_add
           dollars = dollars - water_add * 1
-          print("You have:",dollars, "Remaining")
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
           print("You have chosen to buy Animals")
-          print("You have:",dollars,"Dollars Left") 
+          print("You have:",dollars,"PyCoin Left") 
           animal_add = int(input("How many animals do you want to buy?:"))
           if animal_add == "Quit" or animal_add == "Qut" or animal_add == "quit":
             print("You have chosen to Quit")
           dollars = dollars - animal_add * 15
-          print("You have:",dollars, "Remaining")
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
 
@@ -487,7 +487,7 @@ def start_game():
         what_buy = str(input("What Item would you like to buy? (Medicine, Food, Water, Animals)"))
         if (what_buy == "Med" or what_buy == "Medicine" or what_buy == "medicine" or what_buy == "med") and dollars > 15:
           print("You have chosen to buy medicine")
-          print("You have:",dollars,"Dollars Left")
+          print("You have:",dollars,"PyCoin Left")
           medicine_add = int(input("How much Medicine do you wish to buy?"))
           if medicine_add == "Quit" or medicine_add == "Qut" or medicine_add == "quit":
             print("You have chosen to Quit")
@@ -498,18 +498,18 @@ def start_game():
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Food" or what_buy == "fd" or what_buy == "food") and dollars > 15:
           print("You Have Chosen to buy food")
-          print("You have:",dollars,"Dollars Left")
+          print("You have:",dollars,"PyCoin Left")
           food_add = str(input("How much food do you wish to buy?"))
           if food_add == "Quit" or food_add == "Qut" or food_add == "quit":
             print("You have chosen to Quit")
           amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
-          print("You have:",dollars, "Remaining")
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "wtr" or what_buy == "Water" or what_buy == "water") and dollars > 15:
           print("You have chosen to buy water")
-          print("You have:",dollars,"Dollars Left") 
+          print("You have:",dollars,"PyCoin Left") 
           water_add = int(input("How much water do you want to buy?:"))
           if water_add == "Quit" or water_add == "Qut" or water_add == "quit":
             print("You have chosen to Quit")
@@ -520,7 +520,7 @@ def start_game():
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
           print("You have chosen to buy Animals")
-          print("You have:",dollars,"Dollars Left") 
+          print("You have:",dollars,"PyCoin Left") 
           animal_add = int(input("How many animals do you want to buy?:"))
           if animal_add == "Quit" or animal_add == "Qut" or animal_add == "quit":
             print("You have chosen to Quit")
@@ -534,19 +534,76 @@ def start_game():
         bufallo_graphics()
         print("You encounter a herd of bufallo")
         if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
-          print("You attempt to hunt the Buffallo")
-          if hunt_random == 0:
-            print("You do not capture the Bufallo")
-            print("===============")
-          elif hunt_random ==1:
-            print("You capture the Bufallo and eat it")
-            print("===============")
-            amnt_food = amnt_food+2
-            print("You gain 2 food")
-            print("You have:",amnt_food,"Food in Total")
-          elif hunt_random == 2:
-            print("You capture the Bufallo, but it escapes")
-            print("===============")
+          word_len = int(input("How long of a word would you like to type: "))
+      if word_len <= 3:
+        print("Invalid")
+      elif word_len == 4:
+
+        print("Length of 4 Selected")
+        four_letter = "Cool", "Nice", "Jazz", "Able", "Baby", "Band", "Have"
+        random_word = four_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time < future:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
+      elif word_len == 5:
+        print("Length of 5 Selected")
+        five_letter = "Water","Horse","Python", "Beast","Cards", "Blues","Travel"
+        random_word = five_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time > future:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
+        
+
+      elif word_len == 6:
+        print("Length of six Selected")
+        print("Length of 5 Selected")
+        six_letter = "Settler","Abroad","Afraid","Appear","Camera","Castle","Garden"
+        random_word = six_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
+        future = current_time + 2
+        if word == random_word and current_time > future:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
+      else:
+        print("Invalid")
 
       if random_action == 23:
         print("===============")
@@ -554,7 +611,7 @@ def start_game():
         print("You find some settlers who offer to give you money if you help them")
         money_earned = randrange(5,56,1)
         print("You earn:",money_earned,"dollars")
-        print("You have:",dollars,"dollars total")
+        print("You have:",dollars,"PyCoin in total")
       
       if random_action == 26 and amnt_food > 4:
         print("===============")
@@ -598,7 +655,7 @@ def end_game():
   
 def main():
   #END
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
   
   print("Welcome to Python Trail")         #Running different functions, Main body
   intro_screen()
@@ -610,7 +667,7 @@ def main():
   if alive == True:
     end_game()
 
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int, location_start, location_end
 main()
 
 
