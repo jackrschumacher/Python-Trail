@@ -167,7 +167,7 @@ def start_game():
       print("===============")
       print("You have encountered a python")
       user_choice = str(input("Would you like to continue or try to hunt the python(hunt or continue)"))
-      hunt_random = randrange(0,3,1)
+      hunt_random = randrange(0,8,1)
       if (user_choice == "hunt" or user_choice == "Hunt" or user_choice == "hnt"):
         print("You attempt to hunt the python")
           
@@ -177,13 +177,61 @@ def start_game():
         print("Invalid")
       elif word_len == 4:
         print("Length of 4 Selected")
-        four_letter = "Cool", "Nice", "Jazz", "Able", "Baby", "Band", 
-        print(four_letter)
+        four_letter = "Cool", "Nice", "Jazz", "Able", "Baby", "Band", "Have"
+        random_word = four_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+        word = str(input("Please enter the word:"))
+        if word == random_word:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
       elif word_len == 5:
         print("Length of 5 Selected")
-        five_letter = "Testt"
+        five_letter = "Water","Horse","Python", "Beast","Cards", "Blues","Travel"
+        random_word = five_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+        word = str(input("Please enter the word:"))
+        if word == random_word:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
+        
+
       elif word_len == 6:
         print("Length of six Selected")
+        print("Length of 5 Selected")
+        six_letter = "Settler","Abroad","Afraid","Appear","Camera","Castle","Garden"
+        random_word = six_letter[hunt_random]
+        print("Please Type:", random_word)
+        print("Ready")
+        time.sleep(1)
+        print("Set")
+        time.sleep(1)
+        print("Go")
+        word = str(input("Please enter the word:"))
+        if word == random_word:
+          print("You have Captured the Python")
+          print("You add two food")
+          amnt_food = amnt_food + 2
+          print("You have:",amnt_food,"Food in total")
+        else:
+          print("You have not captured the Python")
       else:
         print("Invalid")
       
@@ -530,7 +578,7 @@ def start_game():
     
         
 
-        
+
 
 
 
