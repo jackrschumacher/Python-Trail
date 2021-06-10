@@ -90,6 +90,9 @@ def start_game():
   distance_traveled = 0                   #How far you went
   distance_traveled = randrange(1,21,1)   #1-20 miles, intervals of 1
   wagon_dist_traveled = 0                 #Distance traveled by wagon
+  random_food_subtract = randrange(0,0.25,0.1)
+  print("You eat,",random_food_subtract,"Today")
+  print("You have:",amnt_food)
   alive = True
 
   
