@@ -672,6 +672,7 @@ def main():
   global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
   
   print("Welcome to Python Trail")         #Running different functions, Main body
+  print("===============")
   intro_screen()
   main_title()
   get_name()
