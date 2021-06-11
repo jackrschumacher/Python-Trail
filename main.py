@@ -38,7 +38,7 @@ def get_age():
 
 def game_varsetup():     #Buy Supplies
   global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
-  dollars = 400
+  dollars = 700
   general_store()
 
 
