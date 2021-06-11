@@ -25,13 +25,30 @@ def get_name():
   
   town = pygame.image.load("Town.jpeg")
   
-  
 
 def get_age():
   global age
   age = str(input("Please enter your age:"))
   print("Your age is:",age)
   
+def charachter_setup():
+  print("===============")
+  print("Welcome to Charachter Customization")
+  print("===============")
+  print('''What would you like to change about your charachter?
+  1. Skin Tone
+  2. Hair Color
+  3. Eye Color
+  4. Acessories
+
+  ''')
+  usr_select = int(input("Please enter the corresponding number: "))
+
+  if usr_select == 1:
+    print("You have selected to change your charachters hair color")
+    
+
+
   
 
 #END
