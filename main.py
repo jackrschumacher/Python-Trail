@@ -65,7 +65,10 @@ def game_varsetup():     #Buy Supplies
   wheel_amnt = int(input("Please enter the number of wheels you would like to purchase"))
   print("You have bought:",wheel_amnt,"wheels")
   dollars = dollars - wheel_amnt *3
-  print("You have,"dollars,"Pycoin Remaining")
+  print("You have,",dollars,"Pycoin Remaining")
+  bolt_amnt = int(input("Please input the number of bolts that you wish to have:"))
+  dollars = dollars - bolt_amnt * 2
+  print("You have:",dollars,"PyCoin Remaining")
   medicine_amnt = int(input("Please enter the amount of medicine you wish to buy ($10)"))
   print("You have purchased,",medicine_amnt,"Medicine")
   dollars = dollars - medicine_amnt * 10
