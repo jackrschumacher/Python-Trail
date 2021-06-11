@@ -159,18 +159,20 @@ def start_game():
       print("Your Wagon has broken down")
       wagon_broken_graphics()
       user_choice = str(input("Would you like to use spare parts or continue?(Spare or Continue"))
-      if (user_choice == "Spare" or user_choice == "spare" or user_choice == "spr"):
-        wagon_broken = False
-        print("Your Wagon is Repaired")
-        print("===============")
-      elif amnt_food ==0:
-        print(name,"Starved")
-        print( name,"has died!")
-        print("Game Over!")
-        alive_false()
-        print("===============")
-        alive = False
-      elif amnt_food > 0: 
+      random_parts = randrange(0,4,1)
+      if random_parts == 0 and axle_amnt >= 1:
+        print("The axle on your wagon breaks")
+        axle_amnt = axle_amnt - 1
+        print("You have:",axle_amnt,"Axles remaining")
+      elif random_parts == 1 and wheel_amnt >= 1:
+        print("The Wheel on your wagon breaks")
+        wheel_amnt = wheel_amnt - 1
+        print("You have",wheel_amnt,"Wheels remaining")
+      elif random_parts == 2 and wheel_amnt >= 2:
+        print("The bolt on your wagon breaks")
+        bolt_amnt = bolt_amnt - 1
+        print("You have:",bolt_amnt)
+      else: 
         amnt_food = amnt_food - 2
         print("You lose 2 food from wild animals")
         print("You have:",amnt_food,"food left")
