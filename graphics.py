@@ -3,7 +3,7 @@ import sys, pygame
 pygame.init()
 import time
 pygame.event.get()
-global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int,location_start,location_end
+global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int,location_start,location_end, axle_amnt, wheel_amnt, bolt_amnt
 
 width = 400;
 height = 400

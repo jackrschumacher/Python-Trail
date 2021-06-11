@@ -37,7 +37,7 @@ def get_age():
 #END
 
 def game_varsetup():     #Buy Supplies
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end,axle_amnt,wheel_amnt,bolt_amnt
   dollars = 700
   general_store()
 
@@ -87,7 +87,7 @@ def game_varsetup():     #Buy Supplies
 
 
 def start_game():
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_end, location_start
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_end, location_start, axle_amnt, bolt_amnt, wheel_amnt
   print("LOADING...")
   print("===============")
   print("You begin in",location_start,"and Travel to",location_end)
@@ -676,7 +676,7 @@ def end_game():
   
 def main():
   #END
-  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive,var_int,location_start,location_end, wheel_amnt, axle_amnt, bolt_amnt
   
   print("Welcome to Python Trail")         #Running different functions, Main body
   print("===============")
