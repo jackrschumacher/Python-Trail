@@ -388,6 +388,7 @@ def start_game():
     
     if random_action == 11:
       storm_graphics()
+      print("===============")
       print("You have encountered a severe storm. You must wait one day.")
       print("*****WAITING*****")
       time.sleep(5)
@@ -465,6 +466,7 @@ def start_game():
       total_distance = total_distance + add_dist
       print("You add",add_dist,"To your journey")
       print("You have",total_distance,"Miles Left to travel")
+      
 
     if random_action == 17:
       print("===============")
@@ -563,12 +565,12 @@ def start_game():
         current_time = time.time()
         future = current_time + 2
         if word == random_word and current_time < future:
-          print("You have Captured the Python")
+          print("You have Captured the Buffallo")
           print("You add two food")
           amnt_food = amnt_food + 2
           print("You have:",amnt_food,"Food in total")
         else:
-          print("You have not captured the Python")
+          print("You have not captured the Buffallo")
       elif word_len == 5:
         print("Length of 5 Selected")
         five_letter = "Water","Horse","Python", "Beast","Cards", "Blues","Travel"
@@ -583,12 +585,14 @@ def start_game():
         current_time = time.time()
         future = current_time + 2
         if word == random_word and current_time > future:
-          print("You have Captured the Python")
+          print("You have Captured the Bufallo")
           print("You add two food")
           amnt_food = amnt_food + 2
           print("You have:",amnt_food,"Food in total")
+          print("===============")
         else:
-          print("You have not captured the Python")
+          print("You have not captured the Buffallo")
+          print("===============")
         
 
       elif word_len == 6:
