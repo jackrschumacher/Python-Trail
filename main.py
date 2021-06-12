@@ -139,7 +139,8 @@ def start_game():
     random_action_10 = randrange(1,11,1) 
     if random_action_10 ==1:
       alive = cholera()
-
+    elif random_action ==2:
+      wheel_amnt, bolt_amnt, amnt_food = wagon_broken()
 
     random_action_20 = randrange(12,23,1)
     random_action_30 = randrange(24,34,1)
@@ -191,7 +192,7 @@ def start_game():
         return alive
         
 
-    if random_action == 2:
+    def wagon_broken():
       wagon_broken = True
       print("===============")
       print("Your Wagon has broken down")
