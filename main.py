@@ -143,6 +143,8 @@ def start_game():
       wheel_amnt, bolt_amnt, amnt_food = wagon_broken()
     elif random_action == 4:
       amnt_food = python_hunt()
+    elif random_action == 6:
+      amnt_food, amnt_water, spareprts_amnt,= town()
 
     random_action_20 = randrange(12,23,1)
     random_action_30 = randrange(24,34,1)
@@ -270,6 +272,7 @@ def start_game():
           print("You add two food")
           amnt_food = amnt_food + 2
           print("You have:",amnt_food,"Food in total")
+          return amnt_food
         else:
           print("You have not captured the Python")
         
@@ -302,7 +305,7 @@ def start_game():
 
   
     
-    if random_action ==5:
+    def town():
       print("===============")
       town_encountered_graphics()
       end_visit = False
@@ -318,6 +321,7 @@ def start_game():
             print("You have chosen to Quit")
           medicine_amnt = medicine_amnt + medicine_add
           dollars = dollars - medicine_add * 10
+          return medicine_amnt, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
@@ -329,6 +333,7 @@ def start_game():
             print("You have chosen to Quit")
           amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
+          return amnt_food, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
@@ -340,19 +345,21 @@ def start_game():
             print("You have chosen to Quit")
           water_amnt = water_amnt + water_add
           dollars = dollars - water_add * 1
+          return water_amnt, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
           print("You have chosen to buy Animals")
           print("You have:",dollars,"PyCoin Left") 
-          animal_add = int(input("How many animals do you want to buy?:"))
+          animal_add = int(input("How many animals do you want to buy?:")
           if animal_add == "Quit" or animal_add == "Qut" or animal_add == "quit":
             print("You have chosen to Quit")
-          dollars = dollars - animal_add * 15
-          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
+          else:
+             dollars = dollars - animal_add * 15
+            print("You have:",dollars, "PyCoin Remaining")
 
           
         
