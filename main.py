@@ -692,10 +692,64 @@ def start_game():
         1.Go North
         2.Go South
         3.Go East
-        4.Go west
-      
+        4.Go west 
         
         ''')
+
+        random_direction = randrange(0,4,1)
+        correct_choice = randrange(0,2,1)
+        distance_add = randrange(0,26,1)
+        usr_dir_choice = str(input("Please enter which way you wish to go: "))
+        if usr_dir_choice == "North" and random_direction == 0:
+          if correct_choice == 0:
+            print("You have chosen the wrong way")
+            print("You go back")
+            
+            distance_traveled = distance_traveled + distance_subtract
+            print("You have traveled:",distance_traveled)
+          else:
+            print("This is the correct Choice")
+            print("You continue on")
+        if usr_dir_choice == "South" and random_direction == 1:
+          if correct_choice == 0:
+            print("You have chosen the wrong way")
+            print("You go back")
+            
+            distance_traveled = distance_traveled + distance_subtract
+            print("You have traveled:",distance_traveled)
+          else:
+            print("This is the correct Choice")
+            print("You continue on")
+        if usr_dir_choice == "East" and random_direction == 2:
+          if correct_choice == 0:
+            print("You have chosen the wrong way")
+            print("You go back")
+            
+            distance_traveled = distance_traveled + distance_subtract
+            print("You have traveled:",distance_traveled)
+          else:
+            print("This is the correct Choice")
+            print("You continue on")
+        if usr_dir_choice == "West" and random_direction == 3:
+          if correct_choice == 0:
+            print("You have chosen the wrong way")
+            print("You go back")
+            
+            distance_traveled = distance_traveled + distance_subtract
+            print("You have traveled:",distance_traveled)
+          else:
+            print("This is the correct Choice")
+            print("You continue on")
+
+
+
+          
+
+        
+
+
+        
+
 
 
       
