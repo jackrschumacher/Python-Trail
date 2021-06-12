@@ -45,9 +45,11 @@ def charachter_setup():
   usr_select = int(input("Please enter the corresponding number: "))
 
   if usr_select == 1:
-    print("You have selected to change your charachters hair color")
-    hair_color = str(input("What hair color would you like?:"))
+    print("You have selected to change your charachters skin color")
+    hair_color = str(input("What skin tone would you like?:"))
     print("You have chosen:",hair_color,"Hair")
+  elif usr_select == 2:
+    print("You have selected to change your charachters hair color")
 
    
 
