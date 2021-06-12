@@ -141,6 +141,8 @@ def start_game():
       alive = cholera()
     elif random_action ==2:
       wheel_amnt, bolt_amnt, amnt_food = wagon_broken()
+    elif random_action == 4:
+      amnt_food = python_hunt()
 
     random_action_20 = randrange(12,23,1)
     random_action_30 = randrange(24,34,1)
@@ -220,7 +222,7 @@ def start_game():
 
     
         
-    if random_action == 4:
+    def python_hunt():
       python_encountered = True
       print("===============")
       print("You have encountered a python")
