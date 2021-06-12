@@ -167,13 +167,7 @@ def start_game():
     print("You traveled,", distance_traveled,"Miles Today")
     miles_left = total_distance - wagon_dist_traveled
     print("You have",miles_left,"Miles left to travel")
-    if amnt_food >= 1:
-      random_food_subtract = randrange(0,4,1)
-      amnt_food = amnt_food - random_food_subtract
-      print("You eat,",random_food_subtract,"Today")
-      print("You have:",amnt_food)
-    else:
-      print("You are out of food")
+    
   
     def cholera():
       cholera = True
