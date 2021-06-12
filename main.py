@@ -46,11 +46,20 @@ def charachter_setup():
 
   if usr_select == 1:
     print("You have selected to change your charachters skin color")
-    hair_color = str(input("What skin tone would you like?:"))
-    print("You have chosen:",hair_color,"Hair")
+    skin_tone = str(input("What skin tone would you like?:"))
+    print("You have chosen:",skin_tone,"Hair")
   elif usr_select == 2:
     print("You have selected to change your charachters hair color")
-
+    hair_color = str(input("What hair color would you like?:"))
+    print("You have selected:",hair_color,"Hair")
+  elif usr_select == 3:
+    print("You have selected to change your charachters eye color")
+    eye_color = str(input("What eye color would you like?"))
+    print("You have selected:",eye_color,"eye color")
+  elif usr_select == 4:
+    print("You have selected to change acessories")
+    acessories = str(input("What accessory would you like"))
+    print("You have chosen:",accessory)
    
 
 
@@ -708,6 +717,7 @@ def main():
   main_title()
   get_name()
   get_age()
+  charachter_setup()
   game_varsetup()
   start_game()
   if alive == True:
