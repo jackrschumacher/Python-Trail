@@ -136,21 +136,7 @@ def start_game():
 
   while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
-    random_action_10 = randrange(1,11,1) 
-    if random_action_10 ==1:
-      alive = cholera()
-    elif random_action ==2:
-      wheel_amnt, bolt_amnt, amnt_food = wagon_broken()
-    elif random_action == 4:
-      amnt_food = python_hunt()
-    elif random_action == 6:
-      amnt_food, amnt_water, spareprts_amnt, medicine_amnt = town()
-    elif random_action == 7:
-      alive = river()
-
-
-    random_action_20 = randrange(12,23,1)
-    random_action_30 = randrange(24,34,1)
+    random_action = randrange(1,33,1)
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
@@ -172,9 +158,15 @@ def start_game():
     print("You traveled,", distance_traveled,"Miles Today")
     miles_left = total_distance - wagon_dist_traveled
     print("You have",miles_left,"Miles left to travel")
-    
+    if amnt_food >= 1:
+      random_food_subtract = randrange(0,4,1)
+      amnt_food = amnt_food - random_food_subtract
+      print("You eat,",random_food_subtract,"Today")
+      print("You have:",amnt_food)
+    else:
+      print("You are out of food")
   
-    def cholera():
+    if random_action ==1:
       cholera = True
       cholera_graphics()
       print("===============")
@@ -189,11 +181,10 @@ def start_game():
         print( name,"has died!")
         print("Game Over!")
         print("===============")
+        alive_false()
         alive = False
-        return alive
-        
 
-    def wagon_broken():
+    if random_action == 2:
       wagon_broken = True
       print("===============")
       print("Your Wagon has broken down")
@@ -221,7 +212,7 @@ def start_game():
 
     
         
-    def python_hunt():
+    if random_action == 4:
       python_encountered = True
       print("===============")
       print("You have encountered a python")
@@ -275,7 +266,6 @@ def start_game():
           print("You add two food")
           amnt_food = amnt_food + 2
           print("You have:",amnt_food,"Food in total")
-          return amnt_food
         else:
           print("You have not captured the Python")
         
@@ -308,7 +298,7 @@ def start_game():
 
   
     
-    def town():
+    if random_action ==5:
       print("===============")
       town_encountered_graphics()
       end_visit = False
@@ -324,7 +314,6 @@ def start_game():
             print("You have chosen to Quit")
           medicine_amnt = medicine_amnt + medicine_add
           dollars = dollars - medicine_add * 10
-          return medicine_amnt, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
@@ -336,7 +325,6 @@ def start_game():
             print("You have chosen to Quit")
           amnt_food  = amnt_food - food_add
           dollars = dollars - food_add * 10
-          return amnt_food, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
@@ -348,26 +336,24 @@ def start_game():
             print("You have chosen to Quit")
           water_amnt = water_amnt + water_add
           dollars = dollars - water_add * 1
-          return water_amnt, dollars
           print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
         elif (what_buy == "Animal" or what_buy == "animal" or what_buy == "anm") and dolars > 15:
           print("You have chosen to buy Animals")
           print("You have:",dollars,"PyCoin Left") 
-          animal_add = int(input("How many animals do you want to buy?:")
+          animal_add = int(input("How many animals do you want to buy?:"))
           if animal_add == "Quit" or animal_add == "Qut" or animal_add == "quit":
             print("You have chosen to Quit")
+          dollars = dollars - animal_add * 15
+          print("You have:",dollars, "PyCoin Remaining")
           if dollars <=0:
             print("You can not buy anything else, as you are out of money")
-          else:
-             dollars = dollars - animal_add * 15
-            print("You have:",dollars, "PyCoin Remaining")
 
           
         
 
-    def river():
+    if random_action ==7:
       print("===============")
       print("You have encountered a river")
       river_encountered_graphics()
@@ -406,7 +392,7 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
-          
+          alive_false()
       elif (user_choice == "wait" or user_choice =="Wait" or user_choice == "wt"):
         print("*****WAITING*****")
         time.sleep(5)
