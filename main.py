@@ -122,7 +122,7 @@ def start_game():
 
   while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
-    random_action = randrange(1,31,1)
+    random_action = randrange(1,33,1)
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
@@ -222,10 +222,10 @@ def start_game():
         print("Set")
         time.sleep(1)
         print("Go")
-
-        word = str(input("Please enter the word:"))
         current_time = time.time()
         future = current_time + 2
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
         if word == random_word and current_time < future:
           print("You have Captured the Python")
           print("You add two food")
@@ -243,9 +243,10 @@ def start_game():
         print("Set")
         time.sleep(1)
         print("Go")
-        word = str(input("Please enter the word:"))
         current_time = time.time()
         future = current_time + 2
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
         if word == random_word and current_time > future:
           print("You have Captured the Python")
           print("You add two food")
@@ -266,9 +267,10 @@ def start_game():
         print("Set")
         time.sleep(1)
         print("Go")
-        word = str(input("Please enter the word:"))
         current_time = time.time()
         future = current_time + 2
+        word = str(input("Please enter the word:"))
+        current_time = time.time()
         if word == random_word and current_time > future:
           print("You have Captured the Python")
           print("You add two food")
@@ -668,6 +670,9 @@ def start_game():
         print("You lose:",food_lost,"water")
         amnt_water = amnt_water - water_lost
         print("You have",amnt_water,"Water remaining")
+
+      if random_action == 32:
+
 
       
 
