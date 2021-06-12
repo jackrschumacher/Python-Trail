@@ -137,6 +137,10 @@ def start_game():
   while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
     random_action_10 = randrange(1,11,1) 
+    if random_action_10 ==1:
+      alive = cholera()
+
+
     random_action_20 = randrange(12,23,1)
     random_action_30 = randrange(24,34,1)
     distance_traveled = 0                   #How far you went
@@ -168,7 +172,7 @@ def start_game():
     else:
       print("You are out of food")
   
-    if random_action ==1:
+    def cholera():
       cholera = True
       cholera_graphics()
       print("===============")
@@ -183,8 +187,9 @@ def start_game():
         print( name,"has died!")
         print("Game Over!")
         print("===============")
-        alive_false()
         alive = False
+        return alive
+        
 
     if random_action == 2:
       wagon_broken = True
@@ -394,7 +399,7 @@ def start_game():
           print("Game Over!")
           print("===============")
           alive = False
-          alive_false()
+          
       elif (user_choice == "wait" or user_choice =="Wait" or user_choice == "wt"):
         print("*****WAITING*****")
         time.sleep(5)
