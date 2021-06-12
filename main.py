@@ -144,7 +144,10 @@ def start_game():
     elif random_action == 4:
       amnt_food = python_hunt()
     elif random_action == 6:
-      amnt_food, amnt_water, spareprts_amnt,= town()
+      amnt_food, amnt_water, spareprts_amnt, medicine_amnt = town()
+    elif random_action == 7:
+      alive = river()
+
 
     random_action_20 = randrange(12,23,1)
     random_action_30 = randrange(24,34,1)
@@ -364,7 +367,7 @@ def start_game():
           
         
 
-    if random_action ==7:
+    def river():
       print("===============")
       print("You have encountered a river")
       river_encountered_graphics()
