@@ -686,6 +686,16 @@ def start_game():
         print("You have",amnt_water,"Water remaining")
 
       if random_action == 32:
+        print("You lose the trail and are uncertain which way to go")
+        print('''
+        You have 4 options
+        1.Go North
+        2.Go South
+        3.Go East
+        4.Go west
+      
+        
+        ''')
 
 
       
