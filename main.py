@@ -136,7 +136,9 @@ def start_game():
 
   while wagon_dist_traveled <= total_distance and alive:
     random_action = 0
-    random_action = randrange(1,33,1)
+    random_action_10 = randrange(1,11,1) 
+    random_action_20 = randrange(12,23,1)
+    random_action_30 = randrange(24,34,1)
     distance_traveled = 0                   #How far you went
     distance_traveled = randrange(1,21,1)
     wagon_dist_traveled = wagon_dist_traveled + distance_traveled
