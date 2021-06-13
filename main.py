@@ -102,8 +102,28 @@ def charachter_setup():
         print("You have selected a monocle")
         glasses_color = str(input("What type of hat color would you like"))
         print("You have selected a",glasses_color,"Monocle")
-      
+      else:
+        print("Invalid Type")
+    elif acessories == 3:
+      print("You have selected a Watch")
+      print('''
+      Watch Types:
+      1.Wristwatch
+      2.Pocket Watch
+      ''')  
+    
+      watch_type = str(input("Which type of watch would you like (Number)"))
 
+      if watch_type == 1:
+        print("You have selected a wristwatch")
+        wristwatch_color = str(input("What color would you like:"))
+        print("You have slected a",wristwatch_color,"color wristwatch")
+      elif watch_type == 2:
+        print("You have selected Pocket Watch")
+        pocket_watch_color = str(input("What color pocket watch would you like: "))
+        print("You have selected a:",pocket_watch_color,"Pocket Watch")
+      else:
+        print("Invalid Number")
 
       
 
