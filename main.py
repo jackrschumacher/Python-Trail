@@ -125,6 +125,19 @@ def charachter_setup():
       else:
         print("Invalid Number")
 
+    elif acessories == 4:
+      print("You have selected a Mask")
+      print('''
+      Mask Types
+      1.Full Face Masks
+      2.Half-Face Masks
+
+
+      ''')
+      mask_types = int(input("What type of masks would you like (number): "))
+
+      if mask_types == 1:
+        print("You have selected a Full-Face Mask")
       
 
 
