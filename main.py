@@ -60,8 +60,8 @@ def charachter_setup():
     print("You have selected to change acessories")
     print('''
     You can select the following accessories:
-    1.Glasses
-    2.Hat
+    1.Hat
+    2.Glasses
     3.Watch
     4.Mask
     
@@ -75,6 +75,10 @@ def charachter_setup():
       hat_color = str(input("What type of hat color would you like"))
       print("You have selected a",hat_color,"Hat")
     elif acessories == 2:
+      print("You have selected Glasses")
+      print('''
+      What type of glasses would you like?
+      ''')
 
 
 
