@@ -70,15 +70,32 @@ def charachter_setup():
     print("You have chosen:",accessory)
     if acessories == 1:
       print("You have slected a hat")
-      hat_type = str(input("What type of hat would you like"))
-      print("You have selected",hat_type,"Hat")
-      hat_color = str(input("What type of hat color would you like"))
-      print("You have selected a",hat_color,"Hat")
+      print('''
+      Hat Types:
+      1.Fedora
+      2.Baseball Cap
+      ''')
+      hat_type = int(input("What type of hat would you like"))
+      if hat_type == 1:
+        print("You have slected a Fedora")
+        hat_color = str(input("What type of hat color would you like"))
+        print("You have selected a",hat_color,"Fedora")
+      elif hat_type == 2:
+        print("You have selected a Baseball Cap")
+        hat_color = str(input("What type of hat color would you like"))
+        print("You have selected a",hat_color,"Baseball Cap")
+      else:
+        print("Invalid Type Selected")
     elif acessories == 2:
       print("You have selected Glasses")
       print('''
       What type of glasses would you like?
+      1.Wire Frame
+      2.Monocles
       ''')
+      glasses_type = int(input("What type of Glasses would you like(Enter Number)"))
+      if glasses_type == 1:
+      
 
 
 
