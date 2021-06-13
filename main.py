@@ -95,6 +95,16 @@ def charachter_setup():
       ''')
       glasses_type = int(input("What type of Glasses would you like(Enter Number)"))
       if glasses_type == 1:
+        print("You have selected Wire Frame Glasses")
+        glasses_color = str(input("What glasses color would you like"))
+        print("You have selected",glasses_color,"Wire Frame Glasses")
+      elif glasses_type == 2:
+        print("You have selected a monocle")
+        glasses_color = str(input("What type of hat color would you like"))
+        print("You have selected a",glasses_color,"Monocle")
+      
+
+
       
 
 
