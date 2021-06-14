@@ -848,7 +848,26 @@ def start_game():
 
 
 def end_game():
+  print("===============")
   print("You have completed your journey")
+
+def end_game_fail():
+  global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int, location_start, location_end
+  print("===============")
+  print("You have not successfuly completed your journey")
+  user_choice = str(input("Would you like to play again? (y or n):"))
+  if user_choice == "Yes" or user_choice == "y" or user_choice == "Y":
+    print("You have chosen to play again")
+      intro_screen()
+      main_title()
+      get_name()
+      get_age()
+      charachter_setup()
+      game_varsetup()
+      start_game()
+  else:
+    print("Thank you for playing Python Trail")
+
   
 def main():
   #END
@@ -865,6 +884,9 @@ def main():
   start_game()
   if alive == True:
     end_game()
+  else:
+    end_game_fail()
+
 
 global name, amnt_food, dollars, amnt_water, animal, animal_amnt, spareprts_amnt, medicine_amnt, age, total_distance , distance_traveled, wagon_dist_traveled, random_action, user_choice,alive, var_int, location_start, location_end
 main()
