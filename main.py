@@ -3,7 +3,6 @@ from random import randrange    #Import random
 import time 
 from graphics import *
 from data import *
-from replit import db
 import sys, pygame
 pygame.init()
 
@@ -70,75 +69,15 @@ def charachter_setup():
     print("You have chosen:",accessory)
     if acessories == 1:
       print("You have slected a hat")
-      print('''
-      Hat Types:
-      1.Fedora
-      2.Baseball Cap
-      ''')
-      hat_type = int(input("What type of hat would you like"))
-      if hat_type == 1:
-        print("You have slected a Fedora")
-        hat_color = str(input("What type of hat color would you like"))
-        print("You have selected a",hat_color,"Fedora")
-      elif hat_type == 2:
-        print("You have selected a Baseball Cap")
-        hat_color = str(input("What type of hat color would you like"))
-        print("You have selected a",hat_color,"Baseball Cap")
-      else:
-        print("Invalid Type Selected")
+      hat_type = str(input("What type of hat would you like"))
+      print("You have selected",hat_type,"Hat")
+      hat_color = str(input("What type of hat color would you like"))
+      print("You have selected a",hat_color,"Hat")
     elif acessories == 2:
       print("You have selected Glasses")
       print('''
       What type of glasses would you like?
-      1.Wire Frame
-      2.Monocles
       ''')
-      glasses_type = int(input("What type of Glasses would you like(Enter Number)"))
-      if glasses_type == 1:
-        print("You have selected Wire Frame Glasses")
-        glasses_color = str(input("What glasses color would you like"))
-        print("You have selected",glasses_color,"Wire Frame Glasses")
-      elif glasses_type == 2:
-        print("You have selected a monocle")
-        glasses_color = str(input("What type of hat color would you like"))
-        print("You have selected a",glasses_color,"Monocle")
-      else:
-        print("Invalid Type")
-    elif acessories == 3:
-      print("You have selected a Watch")
-      print('''
-      Watch Types:
-      1.Wristwatch
-      2.Pocket Watch
-      ''')  
-    
-      watch_type = str(input("Which type of watch would you like (Number)"))
-
-      if watch_type == 1:
-        print("You have selected a wristwatch")
-        wristwatch_color = str(input("What color would you like:"))
-        print("You have slected a",wristwatch_color,"color wristwatch")
-      elif watch_type == 2:
-        print("You have selected Pocket Watch")
-        pocket_watch_color = str(input("What color pocket watch would you like: "))
-        print("You have selected a:",pocket_watch_color,"Pocket Watch")
-      else:
-        print("Invalid Number")
-
-    elif acessories == 4:
-      print("You have selected a Mask")
-      print('''
-      Mask Types
-      1.Full Face Masks
-      2.Half-Face Masks
-
-
-      ''')
-      mask_types = int(input("What type of masks would you like (number): "))
-
-      if mask_types == 1:
-        print("You have selected a Full-Face Mask")
-      
 
 
 
@@ -765,6 +704,7 @@ def start_game():
         print("You have",amnt_water,"Water remaining")
 
       if random_action == 32:
+        print("===============")
         print("You lose the trail and are uncertain which way to go")
         print('''
         You have 4 options
@@ -784,40 +724,40 @@ def start_game():
             print("You have chosen the wrong way")
             print("You go back")
             
-            distance_traveled = distance_traveled + distance_subtract
+            distance_traveled = distance_traveled + distance_add
             print("You have traveled:",distance_traveled)
           else:
-            print("This is the correct Choice")
+            print("You have chosen the correct way")
             print("You continue on")
         if usr_dir_choice == "South" and random_direction == 1:
           if correct_choice == 0:
-            print("You have chosen the wrong way")
+            print("You have chosen the correct way")
             print("You go back")
             
-            distance_traveled = distance_traveled + distance_subtract
+            distance_traveled = distance_traveled + distance_add
             print("You have traveled:",distance_traveled)
           else:
-            print("This is the correct Choice")
+            print("This is the correct way")
             print("You continue on")
         if usr_dir_choice == "East" and random_direction == 2:
           if correct_choice == 0:
             print("You have chosen the wrong way")
             print("You go back")
             
-            distance_traveled = distance_traveled + distance_subtract
+            distance_traveled = distance_traveled + distance_add
             print("You have traveled:",distance_traveled)
           else:
-            print("This is the correct Choice")
+            print("This is the correct way")
             print("You continue on")
         if usr_dir_choice == "West" and random_direction == 3:
           if correct_choice == 0:
             print("You have chosen the wrong way")
             print("You go back")
             
-            distance_traveled = distance_traveled + distance_subtract
+            distance_traveled = distance_traveled + distance_add
             print("You have traveled:",distance_traveled)
           else:
-            print("This is the correct Choice")
+            print("This is the correct way")
             print("You continue on")
 
 
