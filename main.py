@@ -683,10 +683,65 @@ def start_game():
         print("===============")
         money_graphics()
         print("You find some settlers who offer to give you money if you help them")
-        money_earned = randrange(5,56,1)
-        print("You earn:",money_earned,"dollars")
-        print("You have:",dollars,"PyCoin in total")
-      
+        money_amnt_wanted = int(input("How much money would you like to earn?:"))
+        if money_amnt_wanted >=20:
+          print("Too much money entered! Please Try Again")
+          money_amnt_wanted = int(input("How much money would you like to earn?:"))
+        elif money_amnt_wanted <20:
+          print("You wish to earn:", money_amnt_wanted,"dollars")
+          random_word = randrange(0,18,1)
+          farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
+,"Chicken","Goat","Gander"
+          word = str(input("Please type the word",farm_words[random_word],": "))
+          if word == farm_words[random_word]:
+            print("You have earned 1 Dollar")
+            dollars = dollars + 1
+            print("You have:",dollars,"In total")
+            money_amnt_wanted = money_amnt_wanted - 1
+            while money_amnt_wanted != 0:
+              random_word = randrange(0,18,1)
+              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
+,"Chicken","Goat","Gander"
+              word = str(input("Please type the word",farm_words[random_word],": "))
+              if word == farm_words[random_word]:
+                print("You have earned 1 Dollar")
+                dollars = dollars + 1
+                print("You have:",dollars,"In total")
+                money_amnt_wanted = money_amnt_wanted - 1
+          else:
+            print("You did not enter the word correctly")
+            user_choice = str(input("Would you like to try again?(y or n)"))
+
+            if user_choice == "Y" or user_choice == "y":
+              random_word = randrange(0,18,1)
+              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
+,"Chicken","Goat","Gander"
+              word = str(input("Please type the word",farm_words[random_word],": "))
+              if word == farm_words[random_word]:
+                print("You have earned 1 Dollar")
+                dollars = dollars + 1
+                print("You have:",dollars,"In total")
+                money_amnt_wanted = money_amnt_wanted - 1
+                while money_amnt_wanted != 0:
+                random_word = randrange(0,18,1)
+                farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
+,"Chicken","Goat","Gander"
+                word = str(input("Please type the word",farm_words[random_word],": "))
+                if word == farm_words[random_word]:
+                  print("You have earned 1 Dollar")
+                  dollars = dollars + 1
+                  print("You have:",dollars,"In total")
+                  money_amnt_wanted = money_amnt_wanted - 1
+              if user_choice == "N" or user_choice == "n":
+                print("You continue on")
+
+
+
+        else:
+          print("Invalid Amount Entered.Please Try Again")   
+          money_amnt_wanted = int(input("How much money would you like to earn?:"))   
+
+
       if random_action == 26 and amnt_food > 4:
         print("===============")
         print("Some of your food gets moldy")
