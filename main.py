@@ -690,8 +690,7 @@ def start_game():
         elif money_amnt_wanted <20:
           print("You wish to earn:", money_amnt_wanted,"dollars")
           random_word = randrange(0,18,1)
-          farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
-,"Chicken","Goat","Gander"
+          farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep","Chicken","Goat","Gander"
           word = str(input("Please type the word",farm_words[random_word],": "))
           if word == farm_words[random_word]:
             print("You have earned 1 Dollar")
@@ -700,8 +699,7 @@ def start_game():
             money_amnt_wanted = money_amnt_wanted - 1
             while money_amnt_wanted != 0:
               random_word = randrange(0,18,1)
-              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
-,"Chicken","Goat","Gander"
+              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep","Chicken","Goat","Gander"
               word = str(input("Please type the word",farm_words[random_word],": "))
               if word == farm_words[random_word]:
                 print("You have earned 1 Dollar")
@@ -714,8 +712,7 @@ def start_game():
 
             if user_choice == "Y" or user_choice == "y":
               random_word = randrange(0,18,1)
-              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
-,"Chicken","Goat","Gander"
+              farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep","Chicken","Goat","Gander"
               word = str(input("Please type the word",farm_words[random_word],": "))
               if word == farm_words[random_word]:
                 print("You have earned 1 Dollar")
@@ -723,10 +720,9 @@ def start_game():
                 print("You have:",dollars,"In total")
                 money_amnt_wanted = money_amnt_wanted - 1
                 while money_amnt_wanted != 0:
-                random_word = randrange(0,18,1)
-                farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep"
-,"Chicken","Goat","Gander"
-                word = str(input("Please type the word",farm_words[random_word],": "))
+                  random_word = randrange(0,18,1)
+                  farm_words = "Sow" , "Food", "Horse", "Cow", "Plant", "Bee", "Boar","Buffallo","Calf","Chick","Coop","Egg","Ewe","Sheep","Chicken","Goat","Gander"
+                  word = str(input("Please type the word",farm_words[random_word],": "))
                 if word == farm_words[random_word]:
                   print("You have earned 1 Dollar")
                   dollars = dollars + 1
@@ -858,13 +854,13 @@ def end_game_fail():
   user_choice = str(input("Would you like to play again? (y or n):"))
   if user_choice == "Yes" or user_choice == "y" or user_choice == "Y":
     print("You have chosen to play again")
-      intro_screen()
-      main_title()
-      get_name()
-      get_age()
-      charachter_setup()
-      game_varsetup()
-      start_game()
+    intro_screen()
+    main_title()
+    get_name()
+    get_age()
+    charachter_setup()
+    game_varsetup()
+    start_game()
   else:
     print("Thank you for playing Python Trail")
 
