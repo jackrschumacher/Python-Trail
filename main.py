@@ -66,7 +66,6 @@ def charachter_setup():
     
     ''')
     acessories = str(input("What accessory would you like (Input Number"))
-    print("You have chosen:",accessory)
     if acessories == 1:
       print("You have slected a hat")
       hat_type = str(input("What type of hat would you like"))
@@ -77,7 +76,21 @@ def charachter_setup():
       print("You have selected Glasses")
       print('''
       What type of glasses would you like?
+
+      1. Wire-Frame Glasses
+      2. Monocole
+      3. Regular Glasses
       ''')
+      glasses_type = str(input("What type of glasses would you like"))
+      print("You have selected", glasses_type, "Glasses")
+      if glasses_type == 1:
+        print("You have selected Wire-Frame Glasses")
+      elif glasses_type == 2:
+        print("You have selected a monocole")
+      elif glasses_type == 3:
+        print("You have selected Regular Glasses")
+      else:
+        print("INVALID INPUT")
 
 
 
