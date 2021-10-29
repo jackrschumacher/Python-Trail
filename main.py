@@ -91,6 +91,8 @@ def charachter_setup():
         print("You have selected Regular Glasses")
       else:
         print("INVALID INPUT")
+    elif acessories == 3:
+      print("You ahve selected a Watch")
 
 
 
